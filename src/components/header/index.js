@@ -253,12 +253,13 @@ console.log('isHome',this.props);
       <div>
         <Wrapper isHome={this.props.isHome}>
 
-<h1><Link to="/">CodeWorld</Link></h1>
+<h1><Link to="/">Purifit</Link></h1>
 <Navs isHome={this.props.isHome}>
 
   <ul>
     <li><Link to="/">Home</Link></li>
     <li><Link to="/blog">Blog</Link></li>
+    <li><Link to="/products">Products</Link></li>
     <li><Link to="/about">About</Link></li>
     
   </ul>
