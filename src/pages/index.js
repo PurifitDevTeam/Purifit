@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import wall from '../images/wall.jpg';
 import Layout from '../components/layout'
 import {Container} from '../components/styles/CommonStyles';
-
+import IndexComponent from '../components/index'
 
 const Banner = styled.section`
 padding: 16em 0 13em 0;
@@ -108,22 +108,7 @@ li{
 `;
 
 const IndexPage = () => (
-  <Layout isHome={true}>
-
-<Banner>
-<h2>Purifit Starter</h2>
-
-<Container>
-<p> " A feature rich deployment-ready minimalistic gatsby blog template for bloggers"<br /> 
-  </p>
-  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-</Container>
-  
-				<ExploreBlogsButton>
-					<li><a href="/blog">Explore Blogs</a></li>
-				</ExploreBlogsButton>
-</Banner>
-  </Layout>
+ <IndexComponent/>
 
 
 )
