@@ -7,11 +7,16 @@ import Carousel from 'nuka-carousel';
 import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
 import icon1 from '../../images/icon-1.png'
+import cart from '../../images/cart.jpg'
+import smile1 from '../../images/smile2.jpg'
+import delivery1 from '../../images/delivery1.jpg'
 import icon2 from '../../images/icon-2.png'
 import icon3 from '../../images/icon-3.png'
-import showerfilter from '../../images/showerfilter.png'
+import DoctorImage from '../../images/DoctorImage.png'
+import showerfilter from '../../images/product1.jpg'
+import withShower from '../../images/with-shower.jpg'
 import tap2 from '../../images/tap2.jpg'
-import tapfilter from '../../images/tap-filter.jpg'
+import productbox from '../../images/product-box.jpg'
 import handShower from '../../images/handshower1.jpg'
 import leftarrow from '../../images/left-arrow.jpg'
 import rightarrow from '../../images/right-arrow.jpg'
@@ -107,106 +112,49 @@ console.log('isHome',this.props);
       </div>  {/*End of hero wrapper */}
 
 
+      {/* Numbers Section */}
       <div className="fh5co-advantages-outer">
-		<div className="container">
-			<h1 className="second-title"><span className="span-perfect span-purifit">Purifit</span> <span className="span-features">Features</span></h1>
-			<small>Only necessary</small>
-
-			<div className="row fh5co-advantages-grid-columns">
-
-                <Fade delay={500} left={true}>
-				<div className="col-sm-4">
-					<img className="grid-image" src={icon1} alt="Icon-1"/>
-					<h1 className="grid-title">Usability</h1>
-					<p className="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.</p>
-				</div>
-                </Fade>
-                <Zoom delay={500}>
-				<div className="col-sm-4">
-					<img className="grid-image" src={icon2} alt="Icon-2"/>
-					<h1 className="grid-title">Vitamins Diffusion</h1>
-					<p className="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.</p>
-				</div>
-                </Zoom>
-
-                <Fade delay={500} right={true}>
-				<div className="col-sm-4">
-                <img className="grid-image" src={icon3} alt="Icon-3"/>
-					<h1 className="grid-title">Fit Perfect</h1>
-					<p className="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.</p>
-				</div>
-                </Fade>
-
-			</div>
-		</div>
-    </div>
-    
-
-    {/* ******Features ********************/}
-    <div className="curved-bg-div wow animated fadeIn" data-wow-delay="0.15s"></div>
-	<div id="fh5co-features" className="fh5co-features-outer">
-		<div className="container">
-
-			<div className="row fh5co-features-grid-columns">
-
-				<div className="col-sm-6 in-order-1 wow animated fadeInLeft" data-wow-delay="0.22s">
-					<div className="col-sm-image-container">
-						<Fade delay={400} left={true}><img className="img-float-left featureimages" src={handShower} alt="shower filter"/></Fade>
-						<span className="span-new">NEW</span>
-						<span className="span-improved">Improved</span>
-					</div>
-				</div>
-
-				<div className="col-sm-6 in-order-2 sm-6-content wow animated fadeInRight" data-wow-delay="0.22s">
-					<h1>New Features</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor iste beatae ad adipisci, fugiat dignissimos pariatur, dolore nemo suscipit cum nisi earum voluptates nulla! </p>
-					<span className="circle circle-first"><i className="fab fa-instagram"></i></span>
-					<span className="circle circle-middle"><i className="fab fa-facebook"></i></span>
-					<span className="circle circle-last"><i className="fab fa-twitter"></i></span>
-				</div>
-
-				<div className="col-sm-6 in-order-3 sm-6-content wow animated fadeInLeft" data-wow-delay="0.22s">
-					<h1>ADDED MINERALS</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor iste beatae ad adipisci, fugiat dignissimos pariatur, dolore nemo suscipit cum nisi earum voluptates nulla! </p>
-					<span className="circle circle-first"><i className="fas fa-star"></i></span>
-					<span className="circle circle-middle"><i className="far fa-star"></i></span>
-					<span className="circle circle-last"><i className="far fa-thumbs-up"></i></span>
-				</div>
-
-				<div className="col-sm-6 in-order-4 wow animated fadeInRight" data-wow-delay="0.22s">
-					<Fade delay={400} right={true}><img className="img-float-right featureimages" src={tapfilter} alt="tap filter"/></Fade>
-				</div>
-
-				<div className="col-sm-6 in-order-5 wow animated fadeInLeft" data-wow-delay="0.22s">
-					<div className="col-sm-image-container">
-						<Fade delay={400} left={true}><img className="img-float-left featureimages" src={tap2} alt="tap filter" /></Fade>
-						<span className="span-data">DATA</span>
-						<span className="span-percent">100%</span>
-					</div>
-				</div>
-				<div className="col-sm-6 in-order-6 sm-6-content wow animated fadeInRight" data-wow-delay="0.22s">
-					<h1>EXTENDED LIFE</h1>
-					<p>Perfect for daily use consectetur adipisicing elit. Aliquam dolor iste beatae ad adipisci, fugiat dignissimos pariatur, dolore nemo suscipit cum nisi earum voluptates nulla! </p>
-					<span className="circle circle-first">95%</span>
-					<span className="circle circle-middle"><i className="fas fa-forward"></i></span>
-					<span className="circle circle-last"><i className="fab fa-github"></i></span>
-
-				</div>
+      <div className="container">
+        <h1 className="second-title"> <span className="span-features">Let the Numbers Speak</span></h1>
+        <small></small>
+  
+        <div className="row fh5co-advantages-grid-columns">
+  
+                  <Fade delay={500} left={true}>
+          <div className="col-sm-4">
+            <img className="grid-image" src={cart} alt="Icon-1"/>
+            <div className="number-section-container">
+            <h1 className="grid-number-title">910+ </h1>
+            <h2 className="grid-sub-title">Products sold </h2>
+            <p className="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.</p>
+            </div>
+          </div>
+                  </Fade>
+                  <Zoom delay={500}>
+          <div className="col-sm-4">
+            <img className="grid-image" src={smile1} alt="Icon-2"/>
+            <h1 className="grid-number-title">910+</h1>
+            <h2 className="grid-sub-title">Happy Customers </h2>
+            <p className="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.</p>
+          </div>
+                  </Zoom>
+  
+                  <Fade delay={500} right={true}>
+          <div className="col-sm-4">
+                  <img className="grid-image" src={delivery1} alt="Icon-3"/>
+            <h1 className="grid-number-title">28+</h1>
+            <h2 className="grid-sub-title">Delivery Centres</h2>
+            <p className="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.</p>
+          </div>
+                  </Fade>
+  
+        </div>
+      </div>
+      </div>
 
 
 
-
-			</div> 
-
-
-		</div>
-	</div>
-    {/* End of Features ***************/}
-
-
-
-
- {/* ******Testimonials ********************/}
+       {/* ******Testimonials ********************/}
  <div className="curved-bg-div wow animated fadeIn" data-wow-delay="0.15s"></div>
  <div id="fh5co-features" className="fh5co-features-outer">
      <div className="container">
@@ -228,7 +176,7 @@ console.log('isHome',this.props);
     <div>
         <div className="col-sm-12 testimonial_container">
 
-        <div class="testimonial d-flex flex-column align-items-center justify-content-center text-center trans_200">
+        <div class="testimonial  d-flex flex-column align-items-center justify-content-center text-center trans_200">
         <div className="testimonial-image">
         
         <img src={user1}  className="testimonial-image-user"/></div>
@@ -293,6 +241,121 @@ console.log('isHome',this.props);
      </div>
  </div>
  {/* End of Testimonials ***************/}
+
+ 
+
+      {/* What why and how section */}
+      <div className="fh5co-advantages-outer">
+		<div className="container">
+			<h1 className="second-title"> <span className="span-features">What, Why </span></h1>
+			<small>We will tell you what we are trying to solve, what impact does it make</small>
+
+			<div className="row fh5co-advantages-grid-columns">
+
+                <Fade delay={500} left={true}>
+				<div className="col-sm-4">
+					<img className="grid-image" src={icon1} alt="Icon-1"/>
+					<h1 className="grid-title">Filter</h1>
+					<p className="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.</p>
+				</div>
+                </Fade>
+                <Zoom delay={500}>
+				<div className="col-sm-4">
+					<img className="grid-image" src={icon2} alt="Icon-2"/>
+					<h1 className="grid-title">How</h1>
+					<p className="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.</p>
+				</div>
+                </Zoom>
+
+                <Fade delay={500} right={true}>
+				<div className="col-sm-4">
+                <img className="grid-image" src={icon3} alt="Icon-3"/>
+					<h1 className="grid-title">Advantages</h1>
+					<p className="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.</p>
+				</div>
+                </Fade>
+
+			</div>
+		</div>
+    </div>
+    
+
+    {/* ******Features ********************/}
+    <div className="curved-bg-div wow animated fadeIn" data-wow-delay="0.15s"></div>
+	<div id="fh5co-features" className="fh5co-features-outer">
+		<div className="container">
+
+			<div className="row fh5co-features-grid-columns">
+
+				<div className="col-sm-6 in-order-1 wow animated fadeInLeft" data-wow-delay="0.22s">
+					<div className="col-sm-image-container">
+						<Fade delay={400} left={true}><img className="img-float-left featureimages" src={withShower} alt="shower filter"/></Fade>
+						<span className="span-new">NEW</span>
+						<span className="span-improved">Improved</span>
+					</div>
+				</div>
+
+				<div className="col-sm-6 in-order-2 sm-6-content wow animated fadeInRight" data-wow-delay="0.22s">
+					<h1>New Features</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor iste beatae ad adipisci, fugiat dignissimos pariatur, dolore nemo suscipit cum nisi earum voluptates nulla! </p>
+				{/* 	<span className="circle circle-first"><i className="fab fa-instagram"></i></span>
+					<span className="circle circle-middle"><i className="fab fa-facebook"></i></span>
+    <span className="circle circle-last"><i className="fab fa-twitter"></i></span> */}
+				</div>
+
+				<div className="col-sm-6 in-order-3 sm-6-content wow animated fadeInLeft" data-wow-delay="0.22s">
+					<h1>ADDED MINERALS</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor iste beatae ad adipisci, fugiat dignissimos pariatur, dolore nemo suscipit cum nisi earum voluptates nulla! </p>
+					{/*	<span className="circle circle-first"><i className="fas fa-star"></i></span>
+					<span className="circle circle-middle"><i className="far fa-star"></i></span>
+					<span className="circle circle-last"><i className="far fa-thumbs-up"></i></span>*/}
+				</div>
+
+				<div className="col-sm-6 in-order-4 wow animated fadeInRight" data-wow-delay="0.22s">
+					<Fade delay={400} right={true}><img className="img-float-right featureimages" src={productbox} alt="tap filter"/></Fade>
+				</div>
+
+				<div className="col-sm-6 in-order-5 wow animated fadeInLeft" data-wow-delay="0.22s">
+					<div className="col-sm-image-container">
+						<Fade delay={400} left={true}><img className="img-float-left featureimages" src={tap2} alt="tap filter" /></Fade>
+						<span className="span-data">DATA</span>
+						<span className="span-percent">100%</span>
+					</div>
+				</div>
+				<div className="col-sm-6 in-order-6 sm-6-content wow animated fadeInRight" data-wow-delay="0.22s">
+					<h1>EXTENDED LIFE</h1>
+					<p>Perfect for daily use consectetur adipisicing elit. Aliquam dolor iste beatae ad adipisci, fugiat dignissimos pariatur, dolore nemo suscipit cum nisi earum voluptates nulla! </p>
+				{/*	<span className="circle circle-first">95%</span>
+					<span className="circle circle-middle"><i className="fas fa-forward"></i></span>
+        <span className="circle circle-last"><i className="fab fa-github"></i></span> */}
+
+				</div>
+
+
+        <div className="col-sm-6 in-order-3 sm-6-content wow animated fadeInLeft" data-wow-delay="0.22s">
+					<h1>Doctor Reccomendations</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor iste beatae ad adipisci, fugiat dignissimos pariatur, dolore nemo suscipit cum nisi earum voluptates nulla! </p>
+					{/*  <span className="circle circle-first">66%</span>
+					  <span className="circle circle-middle"><i className="far fa-star"></i></span>
+            <span className="circle circle-last"><i className="far fa-thumbs-up"></i></span> */}
+				</div>
+
+				<div className="col-sm-6 in-order-4 wow animated fadeInRight" data-wow-delay="0.22s">
+					<Fade delay={400} right={true}><img className="img-float-right featureimages" src={DoctorImage} alt="tap filter"/></Fade>
+				</div>
+
+
+			</div> 
+
+
+		</div>
+	</div>
+    {/* End of Features ***************/}
+
+
+
+
+
 
 
 <Footer/>

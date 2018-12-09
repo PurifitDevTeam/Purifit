@@ -37,9 +37,33 @@ html {
 #fh5co-hero-wrapper {
   height: 800px;
   width: 100%;
-  background: url("../images/banner-bg.jpg") no-repeat center;
+  background: url("../images/banner-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
   border-radius: 0 0 50% 50% / 4%;
+  background-color:rgba(0, 0, 0, 0.5);
+  
 }
+
+/* #fh5co-hero-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #fh5co-hero-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;  
+    opacity: .78; 
+    z-index: -1;
+    background: url("../images/banner-bg-3.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-color:rgba(0,0,0,0.4); 
+    border-radius: 0 0 50% 50% / 4%;
+  
+  } */
 .purifit-brand{
     font-family: "Dancing Script";
     font-size:1.6rem;
@@ -60,10 +84,10 @@ html {
 }
 
 .main-navbar-nav {
-  color: #fff !important;
+  color: #000 !important;
 }
 .main-navbar-nav li {
-  color: #fff;
+  color: #000;
   opacity: .7;
 }
 .main-navbar-nav .navbar-nav .nav-item a:hover {
@@ -84,7 +108,7 @@ html {
 .main-navbar-nav .nav-link {
   opacity: 1 !important;
   margin: 0 35px;
-  font-size: 14.5px;
+  font-size: 1.14rem;
   font-weight: 500;
 }
 
@@ -137,7 +161,7 @@ html {
 .fh5co-hero-inner .fh5co-hero-smartphone {
   position: absolute;
   right: 0px;
-  top: 120px;
+  top: 10px;
   height: 650px;
 }
 
@@ -164,7 +188,7 @@ html {
 }
 .fh5co-advantages-outer .span-features {
   text-transform: uppercase;
-  font-size: 42px;
+  font-size: 2.5rem;
 }
 .fh5co-advantages-outer .second-title {
   text-align: center;
@@ -185,6 +209,20 @@ html {
   top: 1px;
   color: #648cff;
 }
+.grid-sub-title{
+  float:none;
+  font-size: 1rem;
+  font-weight:500;
+}
+.grid-number-title{
+  float: left;
+  font-size: 3.2rem;
+  font-weight: 600;
+  }
+
+  .number-section-container{
+
+  }
 .fh5co-advantages-outer .fh5co-advantages-grid-columns .col-sm-4 .grid-title {
   float: left;
   font-size: 20px;
@@ -195,9 +233,10 @@ html {
   font-size: 13px;
   padding-right: 7%;
   width: 70%;
-  color: #c7c7c7;
+  color: #0f0b0b;
   margin-top: 10px;
   line-height: 1.87em;
+  font-weight:500;
 }
 
 .fh5co-slider-inner {
@@ -403,6 +442,7 @@ html {
   font-weight: 600;
   box-shadow: 0 0 0 5px #f9f9f9;
 }
+
 .fh5co-features-outer .col-sm-6 .circle-first {
   width: 35px;
   display: inline-block;
@@ -646,7 +686,7 @@ height:16px;
   .fh5co-hero-inner .fh5co-hero-smartphone {
     position: absolute;
     right: 10px;
-    top: 100px;
+    top: 10px;
     height: 550px;
   }
 
@@ -666,7 +706,7 @@ height:16px;
   .fh5co-hero-inner .fh5co-hero-smartphone {
     position: absolute;
     right: -15px;
-    top: 200px;
+    top: 20px;
     height: 550px;
   }
 }
@@ -689,7 +729,7 @@ height:16px;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    top: 270px;
+    top: 200px;
     height: 460px;
     margin-top: 110px;
   }
@@ -1034,7 +1074,7 @@ height:16px;
 
   .fh5co-hero-inner .fh5co-hero-smartphone {
     height: 380px;
-    top: 420px;
+    top: 300px;
     margin-top: 70px;
   }
 
@@ -1074,7 +1114,7 @@ height:16px;
   }
 
   .fh5co-advantages-outer .span-features {
-    font-size: 24px;
+    font-size: 1.8rem;
     display: block;
     width: 100%;
     text-align: center;
@@ -1099,6 +1139,7 @@ Extra css testimonials
     padding-top: 30px;
     padding-left: 40px;
     padding-right: 40px;
+    margin-top:3rem;
 }
 
 .testimonial-image{

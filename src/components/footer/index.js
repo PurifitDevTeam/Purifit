@@ -29,6 +29,7 @@ const Footer = ()=> {
 						</ul>
 					</nav>
 				</div>
+
 				<div className="column-3-3">
 					<div className="social-icons-footer">
 						<a href="https://www.facebook.com/fh5co" className="footer-social-icon"><FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon></a>
@@ -38,6 +39,7 @@ const Footer = ()=> {
                         <a href="https://www.medium.com/fh5co" className="footer-social-icon"><FontAwesomeIcon icon={faMedium}></FontAwesomeIcon></a>
 					</div>
 				</div>
+				
 			</div>
 
 			<span className="border-bottom-footer"></span>
@@ -45,6 +47,8 @@ const Footer = ()=> {
 			<p className="copyright">&copy; 2018 Purifit All rights reserved. Design by <span className="footericonshower"><img className="showerimageicon" src={showericon}/></span></p>
 
 		</div>
+		
+
 	</footer>
   )
 }
