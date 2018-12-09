@@ -5,7 +5,7 @@ import wall from '../images/wall.jpg';
 import Layout from '../components/layout'
 import {Container} from '../components/styles/CommonStyles';
 import IndexComponent from '../components/index'
-
+import Img from 'gatsby-image'
 const Banner = styled.section`
 padding: 16em 0 13em 0;
 background-attachment: fixed;
@@ -107,10 +107,46 @@ li{
 
 `;
 
-const IndexPage = () => (
- <IndexComponent/>
+const IndexPage = ({data}) => {
+console.log('######## data is ',data);
+const { node } = data.allContentfulLandingPageContent.edges[0];
+console.log('node is ',node);
+  return ( <IndexComponent/>)
+}
 
 
-)
+
+
+
+
 
 export default IndexPage
+
+
+export const query = graphql`
+    query{
+
+      allContentfulLandingPageContent {
+        edges{
+          node {
+            title
+            tagLineDescription {
+              id
+              tagLineDescription
+            }
+            button1text
+            button2text
+            productImage {
+              id
+              sizes(maxWidth: 1280) {
+                ...GatsbyContentfulSizes
+              }
+
+            }
+          }
+        }
+      }
+    }
+
+
+`

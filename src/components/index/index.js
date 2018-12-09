@@ -332,17 +332,7 @@ console.log('isHome',this.props);
 				</div>
 
 
-        <div className="col-sm-6 in-order-3 sm-6-content wow animated fadeInLeft" data-wow-delay="0.22s">
-					<h1>Doctor Reccomendations</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor iste beatae ad adipisci, fugiat dignissimos pariatur, dolore nemo suscipit cum nisi earum voluptates nulla! </p>
-					{/*  <span className="circle circle-first">66%</span>
-					  <span className="circle circle-middle"><i className="far fa-star"></i></span>
-            <span className="circle circle-last"><i className="far fa-thumbs-up"></i></span> */}
-				</div>
-
-				<div className="col-sm-6 in-order-4 wow animated fadeInRight" data-wow-delay="0.22s">
-					<Fade delay={400} right={true}><img className="img-float-right featureimages" src={DoctorImage} alt="tap filter"/></Fade>
-				</div>
+       
 
 
 			</div> 
