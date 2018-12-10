@@ -39,7 +39,7 @@ text-align:center;
 
 a{
     text-decoration:none;
-    box-shadow: 0px 3px 0px 0px rgba(187, 187, 187, 1);
+    box-shadow: 0px 3px 3px 0px rgba(187, 187, 187, 1);
     padding: 0.5em 0.5em;
     color: #0F2027;  /* fallback for old browsers */
 color: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */

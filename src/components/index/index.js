@@ -3,7 +3,8 @@ import { Link } from 'gatsby'
 //import wall from '../../images/wall.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileDownload,faPuzzlePiece } from '@fortawesome/free-solid-svg-icons'
-import Carousel from 'nuka-carousel';
+import Carousel from 'nuka-carousel'
+import CountUp from 'react-countup'
 import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
 import icon1 from '../../images/icon-1.png'
@@ -65,7 +66,7 @@ console.log('isHome',this.props);
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav nav-items-center ml-auto mr-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                <Link className="nav-link" href="#">Home <span className="sr-only">(current)</span></Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#" onclick="$('#fh5co-features').goTo();return false;">Products</a>
@@ -74,14 +75,12 @@ console.log('isHome',this.props);
                 <a className="nav-link" href="#" onclick="$('#fh5co-reviews').goTo();return false;">Reviews</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#"  onclick="$('#fh5co-download').goTo();return false;">Blog</a>
+                <Link className="nav-link" to="/blog" >Blog</Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#"  onclick="$('#fh5co-download').goTo();return false;">About</a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#"  onclick="$('#fh5co-download').goTo();return false;">Contact</a>
-              </li>
+              
             </ul>
             <div className="social-icons-header">
               <a href="https://www.facebook.com/fh5co"><i className="fab fa-facebook-f"></i></a>
@@ -92,12 +91,39 @@ console.log('isHome',this.props);
         </nav>
     
         <div className="container fh5co-hero-inner">
-          <h1 className="animated fadeIn wow" data-wow-delay="0.4s">A new tool for purity</h1>
-          <p className="animated fadeIn wow" data-wow-delay="0.67s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptates, aliquid soluta distinctio dolorum tenetur. </p>
-          <button className="btn btn-md download-btn-first wow fadeInLeft animated" data-wow-delay="0.85s" onclick="$('#fh5co-download').goTo();return false;"><FontAwesomeIcon icon={faFileDownload}></FontAwesomeIcon>&nbsp;&nbsp;Brochure</button>
-          <button className="btn btn-md features-btn-first animated fadeInLeft wow" data-wow-delay="0.95s" onclick="$('#fh5co-features').goTo();return false;"><FontAwesomeIcon icon={faPuzzlePiece}/>&nbsp;&nbsp;Products</button>
+          <h2 className="product-tagline" data-wow-delay="0.4s">Water filters for taps and showers</h2>
+          <div className="container">
+          <div className="number-section-item row ">
+          <div className="col-md-3 xs-12">
+          <div className="number-section-number-container">
+          <h1 className="grid-number-title-number-section">
+          <CountUp
+  start={0}
+  end={9871}
+  duration={2.75}
+   /> + </h1>
+          <h2 className="grid-sub-title-number-section">Products sold </h2>
+          </div>
+          
+          </div>
+          <div className="col-md-3 xs-12">
+          
+          <div className="number-section-number-container">
+          <h1 className="grid-number-title-number-section"><CountUp
+          start={0}
+          end={13371}
+          duration={2.75}
+           />+ </h1>
+          <h2 className="grid-sub-title-number-section">Happy Customers </h2>
+          </div>
+          
+          </div>
+          </div>
+          <div className="number-section-item row"></div>
+          <div className="number-section-item row"></div>
+          </div>
           <Zoom>
-          <img className="fh5co-hero-smartphone animated fadeInRight wow" data-wow-delay="1s" src={showerfilter} alt="Filter" />
+          <img className="fh5co-hero-smartphone animated fadeInRight wow" data-wow-delay="1s" src={productbox} alt="Filter" />
           </Zoom>
         </div>
     
@@ -163,76 +189,50 @@ console.log('isHome',this.props);
      <div className="testimonial-section-heading"> <h1>Our users say..</h1></div>
          <div className="row fh5co-features-grid-columns">
         
-
-
-
-    <Carousel autoplay={true} autoplayInterval={3000} swiping={true} renderCenterLeftControls={({ previousSlide }) => (
-        <button className="carouselbutton" onClick={previousSlide}><img src={leftarrow} className="testimonial-carousel-arrow" /></button>
-      )}
-      renderCenterRightControls={({ nextSlide }) => (
-        <button className="carouselbutton" onClick={nextSlide}><img src={rightarrow} className="testimonial-carousel-arrow" /></button>
-      )}>
-        
-    <div>
-        <div className="col-sm-12 testimonial_container">
-
-        <div class="testimonial  d-flex flex-column align-items-center justify-content-center text-center trans_200">
+         <div className="col-sm-4">
+         <div class="testimonial">
+         <div className="testimonial-image">
+         
+         <img src={user1}  className="testimonial-image-user"/>
+         </div>
+         <div class="testimonial-text-section">
+         <div className="testimonial-title">Best Product</div>
+         <div className="testimonial-text"><p>Lleap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem</p></div>
+         <div className="testimonial-author">Emma Whitton, Customer</div>
+         </div>
+         
+         
+         </div></div>
+         <div className="col-sm-4">
+         <div class="testimonial">
         <div className="testimonial-image">
         
-        <img src={user1}  className="testimonial-image-user"/></div>
+        <img src={user2}  className="testimonial-image-user"/>
+        </div>
+        <div class="testimonial-text-section">
         <div className="testimonial-title">Best Product</div>
         <div className="testimonial-text"><p>Lleap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem</p></div>
-        <div className="testimonial-author">Emma Whitton, Customer</div>
+        <div className="testimonial-author">Sophie Turner, Customer</div>
         </div>
         
+        
         </div>
-    </div>
+        </div>
+         <div className="col-sm-4">
+         <div class="testimonial">
+        <div className="testimonial-image">
         
-    <div>
-    <div className="col-sm-12 testimonial_container">
-
-    <div class="testimonial d-flex flex-column align-items-center justify-content-center text-center trans_200">
-    <div className="testimonial-image">
-    
-    <img src={user2} className="testimonial-image-user" /></div>
-    <div className="testimonial-title">zawer</div>
-    <div className="testimonial-text"><p>Leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem</p></div>
-    <div className="testimonial-author">Josephine Sans, Customer</div>
-    </div>
-    
-    </div>
-    </div>
-
-    <div>
-    <div className="col-sm-12 testimonial_container">
-
-    <div class="testimonial d-flex flex-column align-items-center justify-content-center text-center trans_200">
-    <div className="testimonial-image">
-    
-    <img src={user3} className="testimonial-image-user" /></div>
-    <div className="testimonial-title">zawer</div>
-    <div className="testimonial-text"><p>Leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem</p></div>
-    <div className="testimonial-author">Jane Doe, Customer</div>
-    </div>
-    
-    </div>
-    </div>
-    
+        <img src={user3}  className="testimonial-image-user"/>
+        </div>
+        <div class="testimonial-text-section">
+        <div className="testimonial-title">Best Product</div>
+        <div className="testimonial-text"><p>Lleap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem</p></div>
+        <div className="testimonial-author">Julia Roberts, Customer</div>
+        </div>
         
-      </Carousel>
         
-            
-
-             
-
-            
-
-            
-
-            
-             
-
-
+        </div>
+         </div>
 
 
          </div> 
@@ -245,7 +245,7 @@ console.log('isHome',this.props);
  
 
       {/* What why and how section */}
-      <div className="fh5co-advantages-outer">
+      <div className="fh5co-advantages-outer what-why-section">
 		<div className="container">
 			<h1 className="second-title"> <span className="span-features">What, Why </span></h1>
 			<small>We will tell you what we are trying to solve, what impact does it make</small>
@@ -312,7 +312,7 @@ console.log('isHome',this.props);
 				</div>
 
 				<div className="col-sm-6 in-order-4 wow animated fadeInRight" data-wow-delay="0.22s">
-					<Fade delay={400} right={true}><img className="img-float-right featureimages" src={productbox} alt="tap filter"/></Fade>
+					<Fade delay={400} right={true}><img className="img-float-right featureimages" src={showerfilter} alt="tap filter"/></Fade>
 				</div>
 
 				<div className="col-sm-6 in-order-5 wow animated fadeInLeft" data-wow-delay="0.22s">

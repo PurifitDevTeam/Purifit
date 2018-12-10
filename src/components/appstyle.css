@@ -44,6 +44,55 @@ html {
   
 }
 
+
+.number-section-item{
+  
+  
+}
+
+.app-header-wrapper{
+
+  background-color: #2e3149;
+}
+
+.grid-number-title-number-section{
+  float: left;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color:#fff;
+}
+
+.grid-sub-title-number-section{
+  color:#fff;
+  float:none;
+  font-size: 1rem;
+  font-weight:500;
+}
+.product-tagline{
+  color:#fff;
+  margin-bottom:7px;
+}
+
+.span-features-blog{
+  text-transform: uppercase;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.second-title-blog{
+
+  text-align: center;
+}
+
+
+
+.number-section-number-container{
+  display: flex;
+  flex-direction: column;
+  border:1px solid #291e1e;
+  padding:30px;
+  align-items: center;
+}
 /* #fh5co-hero-wrapper {
     position: relative;
     z-index: 1;
@@ -75,6 +124,38 @@ html {
     font-weight:bold;
 }
 
+
+.navbar-dark{
+  font-size: 3rem;
+  letter-spacing: 5px;
+  position: relative;
+  top: -5px;
+  font-weight: 500; 
+  color: #000 !important;
+}
+
+.background-header-wrapper:after{
+   content:'';
+   height: 15vh;
+  background-color: #000!important;
+}
+
+
+.background-header-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100px;  
+  opacity: .4; 
+  z-index: -1;
+  background-color: black;
+}
+.navbar-dark li {
+  color: #000;
+  opacity: .7;
+}
 .main-navbar-nav .navbar-brand {
   font-size: 3rem;
   letter-spacing: 5px;
@@ -160,7 +241,7 @@ html {
 }
 .fh5co-hero-inner .fh5co-hero-smartphone {
   position: absolute;
-  right: 0px;
+  right: -25px;
   top: 10px;
   height: 650px;
 }
@@ -334,6 +415,13 @@ html {
   line-height: 1.8em;
   width: 450px;
 }
+.what-why-section{
+  margin-top:100px;
+}
+
+
+
+
 .fh5co-features-outer .col-sm-6 .col-sm-image-container {
   position: relative;
   width: 300px;
@@ -685,7 +773,7 @@ height:16px;
 
   .fh5co-hero-inner .fh5co-hero-smartphone {
     position: absolute;
-    right: 10px;
+    right: -20px;
     top: 10px;
     height: 550px;
   }
@@ -880,6 +968,20 @@ height:16px;
   .fh5co-reviews-outer {
     padding: 0;
   }
+ 
+
+
+  .background-header-wrapper{
+    
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    top: 10px;
+    right: 5px;
+    position: absolute;
+    display: inline-block;
+  }
+
 
   .navbar-light .navbar-toggler {
     color: #fff !important;
@@ -1130,6 +1232,19 @@ Extra css testimonials
 
 .testimonial_container{
     padding-top:20px;
+    
+}
+.testimonial-one-section{
+  
+}
+
+.testimonial_container-flex{
+  display: flex;
+ /* background-color: #434769; */
+}
+
+.testimonial-one-section{
+  display: flex;
 }
 .testimonial{
 
@@ -1140,6 +1255,7 @@ Extra css testimonials
     padding-left: 40px;
     padding-right: 40px;
     margin-top:3rem;
+    position: relative;
 }
 
 .testimonial-image{
@@ -1172,6 +1288,7 @@ Extra css testimonials
 
     font-size: 1.8rem;
     font-weight: 600;
+    margin-top:30px;
 }
 
 .testimonial-text p{
@@ -1180,6 +1297,10 @@ Extra css testimonials
     font-weight:500;
 
 
+}
+.testimonial-text-section{
+  position: inherit;
+  top:80px;
 }
 
 .testimonial-author{
@@ -1193,4 +1314,22 @@ Extra css testimonials
     text-align: center;
     text-transform: uppercase;
     margin-bottom:20px;
+}
+
+@media screen and (max-width: 993px) {
+
+  .what-why-section{
+    margin-top:50px;
+  }
+
+  .testimonial-image{
+    top:50px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .testimonial-image{
+    top:50px;
+  }
+
 }

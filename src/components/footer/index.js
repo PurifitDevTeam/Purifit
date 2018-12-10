@@ -20,12 +20,12 @@ const Footer = ()=> {
 				<div className="column-2-3">
 					<nav className="footer-nav">
 						<ul>
-							<a href="#" onclick="$('#fh5co-hero-wrapper').goTo();return false;"><li>Home</li></a>
+							<Link to="/home"><li className="active">Home</li></Link>
 							<a href="#" onclick="$('#fh5co-features').goTo();return false;"><li>Products</li></a>
                             <a href="#" onclick="$('#fh5co-reviews').goTo();return false;"><li>Reviews</li></a>
-                            <a href="#" onclick="$('#fh5co-reviews').goTo();return false;"><li>Blog</li></a>
+                            <Link to="/blog" onclick="$('#fh5co-reviews').goTo();return false;"><li>Blog</li></Link>
                             <a href="#" onclick="$('#fh5co-reviews').goTo();return false;"><li>About</li></a>
-							<a href="#" onclick="$('#fh5co-download').goTo();return false;"><li className="active">Contact</li></a>
+						
 						</ul>
 					</nav>
 				</div>
