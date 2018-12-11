@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-
+import favicon from '../../images/shower-icon.png';
 const SiteMetadata = (props)=> {
 
     return (
@@ -12,6 +12,7 @@ const SiteMetadata = (props)=> {
         <meta http-equiv="cache-control" content="public" />
         <meta http-equiv="cache-control" content="max-age=0" />
         <meta http-equiv="cache-control" content="must-revalidate" />
+        <meta rel="shortcut icon" type="image/png" href={`${favicon}`} />
         </Helmet>
     )
 }

@@ -50,9 +50,19 @@ html {
   
 }
 
+.about-us-section-article{
+  margin-top: 3rem;
+}
+
+.doctors-section-title{
+text-align: center;
+margin-top:0.75rem;
+
+}
+
 .app-header-wrapper{
 
-  background-color: #2e3149;
+  background-color: #234197;;
 }
 
 .grid-number-title-number-section{

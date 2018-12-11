@@ -66,20 +66,23 @@ console.log('isHome',this.props);
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav nav-items-center ml-auto mr-auto">
               <li className="nav-item active">
-                <Link className="nav-link" href="#">Home <span className="sr-only">(current)</span></Link>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#" onclick="$('#fh5co-features').goTo();return false;">Products</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#" onclick="$('#fh5co-reviews').goTo();return false;">Reviews</a>
+                <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/blog" >Blog</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#"  onclick="$('#fh5co-download').goTo();return false;">About</a>
-              </li>
+              <Link className="nav-link" to="/" >Products</Link>
+            </li>
+
+            <li className="nav-item">
+            <Link className="nav-link" to="/about" >About</Link>
+            </li>
+
+            <li className="nav-item">
+            <Link className="nav-link" to="/" >Contact</Link>
+            </li>
+             
               
             </ul>
             <div className="social-icons-header">
@@ -91,37 +94,8 @@ console.log('isHome',this.props);
         </nav>
     
         <div className="container fh5co-hero-inner">
-          <h2 className="product-tagline" data-wow-delay="0.4s">Water filters for taps and showers</h2>
-          <div className="container">
-          <div className="number-section-item row ">
-          <div className="col-md-3 xs-12">
-          <div className="number-section-number-container">
-          <h1 className="grid-number-title-number-section">
-          <CountUp
-  start={0}
-  end={9871}
-  duration={2.75}
-   /> + </h1>
-          <h2 className="grid-sub-title-number-section">Products sold </h2>
-          </div>
-          
-          </div>
-          <div className="col-md-3 xs-12">
-          
-          <div className="number-section-number-container">
-          <h1 className="grid-number-title-number-section"><CountUp
-          start={0}
-          end={13371}
-          duration={2.75}
-           />+ </h1>
-          <h2 className="grid-sub-title-number-section">Happy Customers </h2>
-          </div>
-          
-          </div>
-          </div>
-          <div className="number-section-item row"></div>
-          <div className="number-section-item row"></div>
-          </div>
+        <h1 className="animated fadeIn wow" data-wow-delay="0.4s">A new tool for purity</h1>
+        <p className="animated fadeIn wow" data-wow-delay="0.67s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptates, aliquid soluta distinctio dolorum tenetur. </p>
           <Zoom>
           <img className="fh5co-hero-smartphone animated fadeInRight wow" data-wow-delay="1s" src={productbox} alt="Filter" />
           </Zoom>
@@ -197,7 +171,7 @@ console.log('isHome',this.props);
          </div>
          <div class="testimonial-text-section">
          <div className="testimonial-title">Best Product</div>
-         <div className="testimonial-text"><p>Lleap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem</p></div>
+         <div className="testimonial-text"><p>Lleap into electronic typesetting, Excellent Product with the release of Letraset sheets containing Lorem Ipsum </p></div>
          <div className="testimonial-author">Emma Whitton, Customer</div>
          </div>
          
@@ -211,7 +185,7 @@ console.log('isHome',this.props);
         </div>
         <div class="testimonial-text-section">
         <div className="testimonial-title">Best Product</div>
-        <div className="testimonial-text"><p>Lleap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem</p></div>
+        <div className="testimonial-text"><p>Lleap into electronic typesetting, Excellent Product with the release of Letraset sheets containing Lorem Ipsum </p></div>
         <div className="testimonial-author">Sophie Turner, Customer</div>
         </div>
         
@@ -226,7 +200,7 @@ console.log('isHome',this.props);
         </div>
         <div class="testimonial-text-section">
         <div className="testimonial-title">Best Product</div>
-        <div className="testimonial-text"><p>Lleap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem</p></div>
+        <div className="testimonial-text"><p>Lleap into electronic typesetting, Excellent Product with the release of Letraset sheets containing Lorem Ipsum </p></div>
         <div className="testimonial-author">Julia Roberts, Customer</div>
         </div>
         
@@ -344,7 +318,50 @@ console.log('isHome',this.props);
 
 
 
+{/* Start of Doctor Reccomendations */}
+<div id="fh5co-features" className="fh5co-features-outer">
+    <div className="container">
+    <h1 className="doctors-section-title"> <span className="span-features">Even the Doctors say..</span></h1>
+    <div className="row fh5co-advantages-grid-columns">
+   
+        <div className="col-sm-6">
+        <div class="testimonial">
+        <div className="testimonial-image">
+        
+        <img src={user1}  className="testimonial-image-user"/>
+        </div>
+        <div class="testimonial-text-section">
+        <div className="testimonial-title">Best Product</div>
+        <div className="testimonial-text"><p>Lleap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem</p></div>
+        <div className="testimonial-author">Emma Whitton, Customer</div>
+        </div>
+        
+        
+        </div>
+        </div>
 
+
+        <div className="col-sm-6">
+        <div class="testimonial">
+        <div className="testimonial-image">
+        
+        <img src={user2}  className="testimonial-image-user"/>
+        </div>
+        <div class="testimonial-text-section">
+        <div className="testimonial-title">Best Product</div>
+        <div className="testimonial-text"><p>Lleap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem</p></div>
+        <div className="testimonial-author">Emma Whitton, Customer</div>
+        </div>
+        
+        
+        </div>
+        </div>
+
+
+        </div> {/*End of row */}
+    </div>
+    </div>
+{/* End of Doctor Reccomendations*/}
 
 
 

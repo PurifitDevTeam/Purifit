@@ -21,10 +21,10 @@ const Footer = ()=> {
 					<nav className="footer-nav">
 						<ul>
 							<Link to="/home"><li className="active">Home</li></Link>
-							<a href="#" onclick="$('#fh5co-features').goTo();return false;"><li>Products</li></a>
-                            <a href="#" onclick="$('#fh5co-reviews').goTo();return false;"><li>Reviews</li></a>
-                            <Link to="/blog" onclick="$('#fh5co-reviews').goTo();return false;"><li>Blog</li></Link>
-                            <a href="#" onclick="$('#fh5co-reviews').goTo();return false;"><li>About</li></a>
+							<Link to="/blog"><li>Blog</li></Link>
+							<Link to="/"><li>Products</li></Link>
+							<Link to="/about"><li>About</li></Link>
+							<Link to="/"><li>Contact</li></Link>
 						
 						</ul>
 					</nav>

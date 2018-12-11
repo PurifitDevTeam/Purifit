@@ -10,15 +10,18 @@ export default function about() {
     <div>
         <Layout isHome={false}>
        <Section>
-           <Container>
+       <div class="container">
 
-        <h1>About this project</h1>
+       <h1 className="second-title-blog"><span className="span-features-blog">About Purifit</span></h1>
        
-       <p>This project is aimed at creating a very simple Gatsby v2.0 blog template with a minimalistic design approach, feature rich and responsive design. It uses typefaces fonts to load fonts much more quickly than embedding a google font URL. This project also uses styled component which is also a fantastic tool to implement component wise css without the hassle of CSS in JS, Yes, you heard it right it is a kind of CSS in JS but with a different approach, with this you can directly write the CSS code in your component unlike the regular CSS in JS in which you have to convert each property to cameCased ones</p>
+       <div className="about-us-section-article">
+       <p>Bacon ipsum dolor amet brisket chicken pastrami salami landjaeger swine beef, capicola ham meatball short loin cow. Turkey ground round biltong burgdoggen sausage. Pancetta salami spare ribs strip steak turducken buffalo pork chop burgdoggen bacon beef. Landjaeger meatball andouille ham tail. Leberkas bresaola turducken meatball pork pork loin ham.</p>
 								
-		<p>This project is hosted in github and the site is hosted in Netlify, you can read How it is hosted for free in the blogs</p>						
-
-           </Container>
+		<p>Tongue capicola sirloin kevin, bacon andouille picanha. Hamburger buffalo sirloin flank strip steak boudin fatback pork chop drumstick. Picanha frankfurter salami sausage spare ribs pork tail beef ribs shoulder prosciutto capicola tongue meatball porchetta jerky. Capicola meatloaf tri-tip jowl. Leberkas buffalo pig landjaeger boudin.</p>						
+<p>Ham hock short loin meatloaf, meatball turkey filet mignon jerky. Ball tip biltong ham hock, landjaeger swine shoulder meatloaf pastrami. Ham hock drumstick burgdoggen pork belly capicola turkey alcatra porchetta turducken andouille. Ground round pastrami strip steak ribeye kielbasa cow. Landjaeger frankfurter short ribs shank ground round tongue tail pork sausage pig spare ribs doner pancetta kevin. Kevin drumstick burgdoggen buffalo.</p>
+          
+    </div>
+    </div>
            
            
 

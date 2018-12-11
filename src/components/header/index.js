@@ -47,21 +47,20 @@ console.log('isHome',this.props);
           <li className="nav-item active">
             <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
           </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#" onclick="$('#fh5co-features').goTo();return false;">Products</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#" onclick="$('#fh5co-reviews').goTo();return false;">Reviews</a>
-          </li>
+          
           <li className="nav-item">
             <Link className="nav-link" to="/blog" >Blog</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#"  onclick="$('#fh5co-download').goTo();return false;">About</a>
+            <Link className="nav-link" to="/" >Products</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#"  onclick="$('#fh5co-download').goTo();return false;">Contact</a>
+            <Link className="nav-link" to="/about" >About</Link>
           </li>
+          <li className="nav-item">
+          <Link className="nav-link" to="/" >Contact</Link>
+        </li>
+          
         </ul>
         <div className="social-icons-header">
           <a href="https://www.facebook.com/fh5co"><i className="fab fa-facebook-f"></i></a>
