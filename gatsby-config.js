@@ -15,8 +15,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Purifit - Premium filters for taps and showers',
+        short_name: 'Purifit',
         start_url: '/',
         background_color: '#2a3169',
         theme_color: '#2a3169',

@@ -10,6 +10,7 @@ import showericon from '../../images/showericon.jpg'
 
 const Footer = ()=> {
   return (
+	  <div className="footer-main-outer">
     <footer className="footer-outer">
 		<div className="container footer-inner">
 
@@ -50,6 +51,7 @@ const Footer = ()=> {
 		
 
 	</footer>
+	</div>
   )
 }
 

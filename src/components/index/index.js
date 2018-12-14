@@ -2,7 +2,7 @@ import React,{ Component } from 'react'
 import { Link } from 'gatsby'
 //import wall from '../../images/wall.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFileDownload,faPuzzlePiece } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF, faTwitter ,faGooglePlus, faMedium,faGithub,faInstagram } from '@fortawesome/free-brands-svg-icons'
 import Carousel from 'nuka-carousel'
 import CountUp from 'react-countup'
 import Zoom from 'react-reveal/Zoom'
@@ -30,7 +30,8 @@ import user3 from '../../images/user3.jpg'
 
 
   state={
-      isSidebarOpen : false
+      isSidebarOpen : false,
+      
   }
 
 
@@ -48,7 +49,7 @@ import user3 from '../../images/user3.jpg'
   render() {
 console.log('isHome',this.props);
     const {siteTitle}= this.props;
-
+    let shownav = this.state.isSidebarOpen?'show':''
    
 
     return (
@@ -59,11 +60,11 @@ console.log('isHome',this.props);
            <div id="fh5co-hero-wrapper">
         <nav className="container navbar navbar-expand-lg main-navbar-nav navbar-light">
           <a className="navbar-brand" href="">Purifit</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler" type="button" onClick={this.changeSidebarStatus}>
             <span className="navbar-toggler-icon"></span>
           </button>
     
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className={`collapse navbar-collapse ${shownav}`} id="navbarSupportedContent">
             <ul className="navbar-nav nav-items-center ml-auto mr-auto">
               <li className="nav-item active">
                 <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
@@ -86,9 +87,11 @@ console.log('isHome',this.props);
               
             </ul>
             <div className="social-icons-header">
-              <a href="https://www.facebook.com/fh5co"><i className="fab fa-facebook-f"></i></a>
-              <a href="https://freehtml5.co"><i className="fab fa-instagram"></i></a>
-              <a href="https://www.twitter.com/fh5co"><i className="fab fa-twitter"></i></a>
+              <a href="https://www.facebook.com/purifit" target="blank"><FontAwesomeIcon    icon={faFacebookF} /></a>
+              <a href="https://twitter.com/purifit" target="blank"><FontAwesomeIcon    icon={faTwitter} /></a>
+              <a href="https://www.instagram.com/purifit" target="blank"><FontAwesomeIcon icon={faInstagram} /></a>
+              <a href="https://www.googleplus.com/purifit" target="blank"><FontAwesomeIcon icon={faGooglePlus} /></a>
+              <a href="https://www.googleplus.com/purifit" target="blank"><FontAwesomeIcon icon={faMedium}/></a>
             </div>
           </div>
         </nav>
@@ -319,7 +322,7 @@ console.log('isHome',this.props);
 
 
 {/* Start of Doctor Reccomendations */}
-<div id="fh5co-features" className="fh5co-features-outer">
+<div id="fh5co-features" className="fh5co-features-outer-doctor">
     <div className="container">
     <h1 className="doctors-section-title"> <span className="span-features">Even the Doctors say..</span></h1>
     <div className="row fh5co-advantages-grid-columns">

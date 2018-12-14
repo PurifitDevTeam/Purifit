@@ -20,9 +20,18 @@ html {
   background: #f7f7f7;
 }
 
+.social-icons-header{
+  display:flex;
+}
 .download-btn-first:hover {
   background: #234197;
   color: #fff !important;
+}
+
+.fh5co-features-outer-doctor{
+  width: 100%;
+  height: auto;
+  margin-top:100px;
 }
 
 .features-btn-first {
@@ -37,7 +46,7 @@ html {
 #fh5co-hero-wrapper {
   height: 800px;
   width: 100%;
-  background: url("../images/banner-bg.jpg") no-repeat center center fixed;
+  background: url("../images/banner-bg-3.jpg") no-repeat center center fixed;
   background-size: cover;
   border-radius: 0 0 50% 50% / 4%;
   background-color:rgba(0, 0, 0, 0.5);
@@ -57,6 +66,7 @@ html {
 .doctors-section-title{
 text-align: center;
 margin-top:0.75rem;
+text-transform: uppercase;
 
 }
 
@@ -203,12 +213,13 @@ margin-top:0.75rem;
   font-weight: 500;
 }
 
-.social-icons-header i {
+
+.social-icons-header a {
   margin: 15px;
   font-size: 20px;
 }
 
-.social-icons-header a:hover i {
+.social-icons-header a:hover  {
   opacity: .6;
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
@@ -402,10 +413,10 @@ margin-top:0.75rem;
   margin-top: -180px;
 }
 .fh5co-features-outer .col-sm-6 {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 .fh5co-features-outer .col-sm-6  {
-  height: 550px;
+  height: 450px;
 }
 .fh5co-features-outer .sm-6-content {
   margin-top: 250px;
@@ -788,6 +799,10 @@ height:16px;
     height: 550px;
   }
 
+  .footer-main-outer{
+    margin-top: 12rem;
+  }
+
   .curved-bg-div {
     background-position: 100% -20px;
   }
@@ -807,10 +822,21 @@ height:16px;
     top: 20px;
     height: 550px;
   }
+
+  .footer-main-outer{
+    margin-top: 14rem;
+  }
 }
 @media screen and (max-width: 993px) {
+
+
+
   body {
     overflow-x: hidden;
+  }
+
+  .footer-main-outer{
+    margin-top: 30rem;
   }
 
   #fh5co-hero-wrapper {
@@ -881,6 +907,10 @@ height:16px;
   }
 }
 @media screen and (max-width: 993px) {
+
+  .footer-main-outer{
+    margin-top: 35rem;
+  }
   .fh5co-features-grid-columns .col-sm-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 100%;
@@ -890,6 +920,9 @@ height:16px;
     text-align: center;
   }
 
+  .footer-main-outer{
+    margin-top:200px;
+  }
   .featureimages{
    
     height: 320px;
@@ -1011,6 +1044,10 @@ height:16px;
 }
 @media screen and (max-width: 800px) {
 
+
+  .footer-main-outer{
+    margin-top: 35rem;
+  }
     .col-sm-6 {
         height:400px;
     }
@@ -1162,6 +1199,14 @@ height:16px;
   }
 }
 @media screen and (max-width: 520px) {
+
+  .social-icons-header{
+    margin-top:1rem;
+  }
+
+  .footer-main-outer{
+    margin-top:230px;
+  }
     .fh5co-features-outer .col-sm-6 {
         height: 400px;
     }
