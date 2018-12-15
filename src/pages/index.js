@@ -112,8 +112,8 @@ li{
 
 const IndexPage = ({data}) => {
 console.log('######## data is ',data);
-const { node } = data.allContentfulLandingPageContent.edges[0];
-console.log('node is ',node);
+//const { node } = data.allContentfulLandingPageContent.edges[0];
+//console.log('node is ',node);
   return ( 
     <React.Fragment>
     <SiteMeta/>
@@ -131,30 +131,3 @@ console.log('node is ',node);
 export default IndexPage
 
 
-export const query = graphql`
-    query{
-
-      allContentfulLandingPageContent {
-        edges{
-          node {
-            title
-            tagLineDescription {
-              id
-              tagLineDescription
-            }
-            button1text
-            button2text
-            productImage {
-              id
-              sizes(maxWidth: 1280) {
-                ...GatsbyContentfulSizes
-              }
-
-            }
-          }
-        }
-      }
-    }
-
-
-`

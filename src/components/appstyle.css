@@ -46,7 +46,7 @@ html {
 #fh5co-hero-wrapper {
   height: 800px;
   width: 100%;
-  background: url("../images/banner-bg-5.png") no-repeat center center fixed;
+  background: url("../images/banner-bg-9.png") no-repeat center center fixed;
   background-size: cover;
   border-radius: 0 0 50% 50% / 4%;
   background-color:rgba(0, 0, 0, 0.3);
@@ -192,7 +192,7 @@ text-transform: uppercase;
   opacity: .7;
 }
 .main-navbar-nav .navbar-nav .nav-item a:hover {
-  color: #fff !important;
+  color: #2a3169 !important;
   transform:scale(1.25);
   -webkit-transition: all .33s ease;
   -moz-transition: all .33s ease;
@@ -205,7 +205,7 @@ text-transform: uppercase;
   opacity: 1 !important;
 }
 .main-navbar-nav a {
-  color: #2a3169 !important;
+  color: #fff !important;
 }
 .main-navbar-nav .nav-link {
   opacity: 1 !important;
@@ -234,7 +234,7 @@ text-transform: uppercase;
   position: relative;
 }
 .fh5co-hero-inner > h1 {
-  color: #2a3169;
+  color: #fff;
   font-weight: 300;
   font-size: 55px;
   letter-spacing: 2px;
@@ -242,7 +242,7 @@ text-transform: uppercase;
 .fh5co-hero-inner > p {
   width: 400px;
   font-size: 18px;
-  color: #000;
+  color: #fff;
   margin-top: 30px;
   margin-bottom: 30px;
   line-height: 2em;
@@ -813,7 +813,7 @@ height:16px;
   }
 
   .fh5co-hero-inner > h1 {
-    color: #2a3169;
+    color: #fff;
     font-weight: 500;
     font-size: 50px;
     letter-spacing: 2px;
@@ -1069,7 +1069,7 @@ height:16px;
 
 
   .fh5co-hero-inner > h1 {
-    color: #2a3169;
+    color: #fff;
     font-weight: 500;
     font-size: 40px;
     letter-spacing: 2px;
@@ -1222,6 +1222,7 @@ height:16px;
 
   .main-navbar-nav .navbar-nav .nav-item a:hover{
     transform: none;
+    color:#2a3169;
   }
 
   .footer-main-outer{
