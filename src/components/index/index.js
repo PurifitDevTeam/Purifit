@@ -290,7 +290,23 @@ console.log('isHome',this.props);
 
 				<div className="col-sm-6 in-order-4 wow animated fadeInRight" data-wow-delay="0.22s">
 					<Fade delay={400} right={true}><img className="img-float-right featureimages" src={showerfilter} alt="tap filter"/></Fade>
-				</div>
+        </div>
+        
+        <div className="col-sm-6 in-order-1 wow animated fadeInLeft" data-wow-delay="0.22s">
+        <div className="col-sm-image-container">
+          <Fade delay={400} left={true}><img className="img-float-left featureimages" src={withShower} alt="shower filter"/></Fade>
+          <span className="span-new">NEW</span>
+          <span className="span-improved">Improved</span>
+        </div>
+      </div>
+
+      <div className="col-sm-6 in-order-2 sm-6-content wow animated fadeInRight" data-wow-delay="0.22s">
+        <h1>New Features</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor iste beatae ad adipisci, fugiat dignissimos pariatur, dolore nemo suscipit cum nisi earum voluptates nulla! </p>
+      {/* 	<span className="circle circle-first"><i className="fab fa-instagram"></i></span>
+        <span className="circle circle-middle"><i className="fab fa-facebook"></i></span>
+  <span className="circle circle-last"><i className="fab fa-twitter"></i></span> */}
+      </div>
 
 				<div className="col-sm-6 in-order-5 wow animated fadeInLeft" data-wow-delay="0.22s">
 					<div className="col-sm-image-container">

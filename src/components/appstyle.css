@@ -46,10 +46,10 @@ html {
 #fh5co-hero-wrapper {
   height: 800px;
   width: 100%;
-  background: url("../images/banner-bg-3.jpg") no-repeat center center fixed;
+  background: url("../images/banner-bg-5.png") no-repeat center center fixed;
   background-size: cover;
   border-radius: 0 0 50% 50% / 4%;
-  background-color:rgba(0, 0, 0, 0.5);
+  background-color:rgba(0, 0, 0, 0.3);
   
 }
 
@@ -72,7 +72,7 @@ text-transform: uppercase;
 
 .app-header-wrapper{
 
-  background-color: #234197;;
+  background-color: #2a3169;
 }
 
 .grid-number-title-number-section{
@@ -192,7 +192,8 @@ text-transform: uppercase;
   opacity: .7;
 }
 .main-navbar-nav .navbar-nav .nav-item a:hover {
-  color: #234197 !important;
+  color: #fff !important;
+  transform:scale(1.25);
   -webkit-transition: all .33s ease;
   -moz-transition: all .33s ease;
   -o-transition: all .33s ease;
@@ -204,7 +205,7 @@ text-transform: uppercase;
   opacity: 1 !important;
 }
 .main-navbar-nav a {
-  color: #fff !important;
+  color: #2a3169 !important;
 }
 .main-navbar-nav .nav-link {
   opacity: 1 !important;
@@ -233,15 +234,15 @@ text-transform: uppercase;
   position: relative;
 }
 .fh5co-hero-inner > h1 {
-  color: #fff;
+  color: #2a3169;
   font-weight: 300;
   font-size: 55px;
   letter-spacing: 2px;
 }
 .fh5co-hero-inner > p {
   width: 400px;
-  font-size: 14px;
-  color: #fff;
+  font-size: 18px;
+  color: #000;
   margin-top: 30px;
   margin-bottom: 30px;
   line-height: 2em;
@@ -810,6 +811,13 @@ height:16px;
   .footer-outer .footer-three-grid {
     width: 100%;
   }
+
+  .fh5co-hero-inner > h1 {
+    color: #2a3169;
+    font-weight: 500;
+    font-size: 50px;
+    letter-spacing: 2px;
+  }
 }
 @media screen and (max-width: 1200px) {
   body {
@@ -1041,6 +1049,10 @@ height:16px;
     margin-left: 0 !important;
     font-size: 30px;
   }
+
+  .nav-item a:hover {
+    transform: none;
+  }
 }
 @media screen and (max-width: 800px) {
 
@@ -1057,9 +1069,9 @@ height:16px;
 
 
   .fh5co-hero-inner > h1 {
-    color: #fff;
-    font-weight: 300;
-    font-size: 45px;
+    color: #2a3169;
+    font-weight: 500;
+    font-size: 40px;
     letter-spacing: 2px;
   }
 
@@ -1197,11 +1209,19 @@ height:16px;
     display: block;
     margin-top: 100px;
   }
+
+  .main-navbar-nav .navbar-nav .nav-item a:hover{
+    transform: none;
+  }
 }
 @media screen and (max-width: 520px) {
 
   .social-icons-header{
     margin-top:1rem;
+  }
+
+  .main-navbar-nav .navbar-nav .nav-item a:hover{
+    transform: none;
   }
 
   .footer-main-outer{
@@ -1231,7 +1251,7 @@ height:16px;
 
   .fh5co-hero-inner .fh5co-hero-smartphone {
     height: 380px;
-    top: 300px;
+    top: 200px;
     margin-top: 70px;
   }
 
@@ -1387,4 +1407,9 @@ Extra css testimonials
     top:50px;
   }
 
+}
+
+
+.social-icons-header a{
+color:#000;
 }
