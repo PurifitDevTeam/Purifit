@@ -117,7 +117,7 @@ console.log('######## data is ',data);
   return ( 
     <React.Fragment>
     <SiteMeta/>
-    <IndexComponent/>
+    <IndexComponent  WhatWhySection={data.allContentfulWhatWhySection.edges} LandingViewContent={data.allContentfulLandingViewContent.edges}  numbersSectionData={data.allContentfulNumbersSection.edges}/>
     </React.Fragment>
   )
 }
@@ -129,5 +129,131 @@ console.log('######## data is ',data);
 
 
 export default IndexPage
+
+
+export const query = graphql`
+    query{ 
+
+
+
+
+      allContentfulLandingViewContent {
+        edges {
+          node {
+            id
+            productTagLine
+            shortDescription
+            productImage {
+              id
+              title 
+              sizes(maxWidth:375) {
+                ...GatsbyContentfulSizes
+              }
+              file{
+                url
+               
+              }
+            }
+          }
+        }
+      }
+
+
+
+      allContentfulNumbersSection{
+        edges {
+          node {
+            title
+            quantity
+            description
+            
+            numbersIcon {
+              id
+              file{
+                url
+              }
+            }
+          }
+        }
+      }
+
+
+      allContentfulTestimonials{
+        edges {
+          node {
+            id
+            title
+            description {
+              id
+              description
+            }
+            customerName
+            customerPlace
+          }
+        }
+      }
+
+
+      allContentfulWhatWhySection{
+        edges {
+          node {
+            id
+            title
+            description {
+              id
+              description
+            }
+            icon {
+              id
+              file{
+                url
+              }
+            }
+          }
+        }
+      }
+
+
+      allContentfulProductFeatures{
+        edges {
+          node {
+            id
+            title
+            description {
+              id
+              description
+            }
+            productImage {
+              id
+              
+            }
+            
+          }
+        }
+      }
+
+
+      allContentfulDoctorReccomendations{
+        edges {
+          node {
+            id
+            name
+            description {
+              id
+              description
+            }
+            review
+            designation
+           
+            
+          }
+        }
+      }
+
+
+
+
+
+    }`
 
 

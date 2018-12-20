@@ -1,31 +1,28 @@
 import React,{ Component } from 'react'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 //import wall from '../../images/wall.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faTwitter ,faGooglePlus, faMedium,faGithub,faInstagram } from '@fortawesome/free-brands-svg-icons'
-import Carousel from 'nuka-carousel'
-import CountUp from 'react-countup'
+//import Carousel from 'nuka-carousel'
+//import CountUp from 'react-countup'
 import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
-import icon1 from '../../images/icon-1.png'
-import cart from '../../images/cart.jpg'
-import smile1 from '../../images/smile2.jpg'
-import delivery1 from '../../images/delivery1.jpg'
-import icon2 from '../../images/icon-2.png'
-import icon3 from '../../images/icon-3.png'
+
+
 import DoctorImage from '../../images/DoctorImage.png'
-import showerfilter from '../../images/product1.jpg'
-import withShower from '../../images/with-shower.jpg'
-import tap2 from '../../images/tap2.jpg'
+import showerfilter from '../../images/product1.png'
+import withShower from '../../images/with-shower.png'
+import tap2 from '../../images/tap2.png'
 import productbox from '../../images/product-box-1.png'
-import handShower from '../../images/handshower1.jpg'
+
 import leftarrow from '../../images/left-arrow.jpg'
 import rightarrow from '../../images/right-arrow.jpg'
 import Footer from '../footer/index'
 import user1 from '../../images/user1.jpg'
 import user2 from '../../images/user2.jpg'
 import user3 from '../../images/user3.jpg'
-
+//import NumbersSection from '../../views/NumbersSection/NumbersSection'
  class Index extends Component {
 
 
@@ -47,11 +44,19 @@ import user3 from '../../images/user3.jpg'
   }
 
   render() {
-console.log('isHome',this.props);
+
     const {siteTitle}= this.props;
     let shownav = this.state.isSidebarOpen?'show':''
-   
+   const landinPageData = this.props.LandingViewContent[0].node;
+   const NumbersSectionData1 = this.props.numbersSectionData[0].node;
+   const NumbersSectionData2 = this.props.numbersSectionData[1].node;
+   const NumbersSectionData3 = this.props.numbersSectionData[2].node;
 
+   const WhatWhySectionData1 = this.props.WhatWhySection[0].node;
+   const WhatWhySectionData2 = this.props.WhatWhySection[1].node;
+   const WhatWhySectionData3 = this.props.WhatWhySection[2].node;
+
+   console.log('------what why section data -------',WhatWhySectionData1,'----');
     return (
       <div>
       
@@ -97,10 +102,10 @@ console.log('isHome',this.props);
         </nav>
     
         <div className="container fh5co-hero-inner">
-        <h1 className="animated fadeIn wow" data-wow-delay="0.4s">A new tool for purity</h1>
-        <p className="animated fadeIn wow" data-wow-delay="0.67s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptates, aliquid soluta distinctio dolorum tenetur. </p>
+        <h1 className="animated fadeIn wow" data-wow-delay="0.4s">{landinPageData.productTagLine}</h1>
+        <p className="animated fadeIn wow" data-wow-delay="0.67s">{landinPageData.shortDescription} </p>
           <Zoom>
-          <img className="fh5co-hero-smartphone animated fadeInRight wow" data-wow-delay="1s" src={productbox} alt="Filter" />
+          <img className="fh5co-hero-smartphone animated fadeInRight wow" data-wow-delay="1s" src={landinPageData.productImage.file.url} alt="Filter" />
           </Zoom>
         </div>
     
@@ -124,30 +129,31 @@ console.log('isHome',this.props);
         <div className="row fh5co-advantages-grid-columns">
   
                   <Fade delay={500} left={true}>
-          <div className="col-sm-4">
-            <img className="grid-image" src={cart} alt="Icon-1"/>
-            <div className="number-section-container">
-            <h1 className="grid-number-title">910+ </h1>
-            <h2 className="grid-sub-title">Products sold </h2>
-            <p className="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.</p>
-            </div>
-          </div>
+        {/* <NumbersSection url={cart} title={NumbersSectionData.title} quantity={NumbersSectionData.quantity} description={NumbersSectionData.description} /> */}
+         <div className="col-sm-4" >
+        <img className="grid-image" src={NumbersSectionData1.numbersIcon.file.url} alt="Icon-1"/>
+        <div className="number-section-container">
+        <h1 className="grid-number-title">{NumbersSectionData1.quantity}</h1>
+        <h2 className="grid-sub-title">{NumbersSectionData1.title} </h2>
+        <p className="grid-desc">{NumbersSectionData1.description}</p>
+        </div>
+      </div> 
                   </Fade>
                   <Zoom delay={500}>
           <div className="col-sm-4">
-            <img className="grid-image" src={smile1} alt="Icon-2"/>
-            <h1 className="grid-number-title">910+</h1>
-            <h2 className="grid-sub-title">Happy Customers </h2>
-            <p className="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.</p>
+            <img className="grid-image" src={NumbersSectionData2.numbersIcon.file.url} alt="happy smile"/>
+            <h1 className="grid-number-title">{NumbersSectionData2.quantity}</h1>
+            <h2 className="grid-sub-title">{NumbersSectionData2.title} </h2>
+            <p className="grid-desc">{NumbersSectionData2.description}</p>
           </div>
                   </Zoom>
   
                   <Fade delay={500} right={true}>
           <div className="col-sm-4">
-                  <img className="grid-image" src={delivery1} alt="Icon-3"/>
-            <h1 className="grid-number-title">28+</h1>
-            <h2 className="grid-sub-title">Delivery Centres</h2>
-            <p className="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.</p>
+                  <img className="grid-image" src={NumbersSectionData3.numbersIcon.file.url} alt="delivery van"/>
+            <h1 className="grid-number-title">{NumbersSectionData3.quantity}</h1>
+            <h2 className="grid-sub-title">{NumbersSectionData3.title}</h2>
+            <p className="grid-desc">{NumbersSectionData3.description}</p>
           </div>
                   </Fade>
   
@@ -231,24 +237,24 @@ console.log('isHome',this.props);
 
                 <Fade delay={500} left={true}>
 				<div className="col-sm-4">
-					<img className="grid-image" src={icon1} alt="Icon-1"/>
-					<h1 className="grid-title">Filter</h1>
-					<p className="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.</p>
+					<img className="grid-image" src={WhatWhySectionData1.icon.file.url} alt="Icon-1"/>
+					<h1 className="grid-title">{WhatWhySectionData1.title}</h1>
+					<p className="grid-desc">{WhatWhySectionData1.description.description}</p>
 				</div>
                 </Fade>
                 <Zoom delay={500}>
 				<div className="col-sm-4">
-					<img className="grid-image" src={icon2} alt="Icon-2"/>
-					<h1 className="grid-title">How</h1>
-					<p className="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.</p>
+					<img className="grid-image" src={WhatWhySectionData2.icon.file.url} alt="Icon-2"/>
+					<h1 className="grid-title">{WhatWhySectionData2.title}</h1>
+					<p className="grid-desc">{WhatWhySectionData2.description.description}</p>
 				</div>
                 </Zoom>
 
                 <Fade delay={500} right={true}>
 				<div className="col-sm-4">
-                <img className="grid-image" src={icon3} alt="Icon-3"/>
-					<h1 className="grid-title">Advantages</h1>
-					<p className="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.</p>
+                <img className="grid-image" src={WhatWhySectionData3.icon.file.url} alt="Icon-3"/>
+					<h1 className="grid-title">{WhatWhySectionData3.title}</h1>
+					<p className="grid-desc">{WhatWhySectionData3.description.description}</p>
 				</div>
                 </Fade>
 
@@ -394,3 +400,5 @@ console.log('isHome',this.props);
 
 
 export default Index
+
+
