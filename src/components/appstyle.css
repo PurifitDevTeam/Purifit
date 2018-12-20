@@ -20,9 +20,18 @@ html {
   background: #f7f7f7;
 }
 
+.social-icons-header{
+  display:flex;
+}
 .download-btn-first:hover {
   background: #234197;
   color: #fff !important;
+}
+
+.fh5co-features-outer-doctor{
+  width: 100%;
+  height: auto;
+  margin-top:100px;
 }
 
 .features-btn-first {
@@ -37,13 +46,73 @@ html {
 #fh5co-hero-wrapper {
   height: 800px;
   width: 100%;
-  background: url("../images/banner-bg.jpg") no-repeat center center fixed;
+  background: url("../images/banner-bg-9.png") no-repeat center center fixed;
   background-size: cover;
   border-radius: 0 0 50% 50% / 4%;
-  background-color:rgba(0, 0, 0, 0.5);
+  background-color:rgba(0, 0, 0, 0.3);
   
 }
 
+
+.number-section-item{
+  
+  
+}
+
+.about-us-section-article{
+  margin-top: 3rem;
+}
+
+.doctors-section-title{
+text-align: center;
+margin-top:0.75rem;
+text-transform: uppercase;
+
+}
+
+.app-header-wrapper{
+
+  background-color: #2a3169;
+}
+
+.grid-number-title-number-section{
+  float: left;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color:#fff;
+}
+
+.grid-sub-title-number-section{
+  color:#fff;
+  float:none;
+  font-size: 1rem;
+  font-weight:500;
+}
+.product-tagline{
+  color:#fff;
+  margin-bottom:7px;
+}
+
+.span-features-blog{
+  text-transform: uppercase;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.second-title-blog{
+
+  text-align: center;
+}
+
+
+
+.number-section-number-container{
+  display: flex;
+  flex-direction: column;
+  border:1px solid #291e1e;
+  padding:30px;
+  align-items: center;
+}
 /* #fh5co-hero-wrapper {
     position: relative;
     z-index: 1;
@@ -75,6 +144,38 @@ html {
     font-weight:bold;
 }
 
+
+.navbar-dark{
+  font-size: 3rem;
+  letter-spacing: 5px;
+  position: relative;
+  top: -5px;
+  font-weight: 500; 
+  color: #000 !important;
+}
+
+.background-header-wrapper:after{
+   content:'';
+   height: 15vh;
+  background-color: #000!important;
+}
+
+
+.background-header-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100px;  
+  opacity: .4; 
+  z-index: -1;
+  background-color: black;
+}
+.navbar-dark li {
+  color: #000;
+  opacity: .7;
+}
 .main-navbar-nav .navbar-brand {
   font-size: 3rem;
   letter-spacing: 5px;
@@ -91,7 +192,8 @@ html {
   opacity: .7;
 }
 .main-navbar-nav .navbar-nav .nav-item a:hover {
-  color: #234197 !important;
+  color: #2a3169 !important;
+  transform:scale(1.25);
   -webkit-transition: all .33s ease;
   -moz-transition: all .33s ease;
   -o-transition: all .33s ease;
@@ -112,12 +214,13 @@ html {
   font-weight: 500;
 }
 
-.social-icons-header i {
+
+.social-icons-header a {
   margin: 15px;
   font-size: 20px;
 }
 
-.social-icons-header a:hover i {
+.social-icons-header a:hover  {
   opacity: .6;
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
@@ -138,7 +241,7 @@ html {
 }
 .fh5co-hero-inner > p {
   width: 400px;
-  font-size: 14px;
+  font-size: 18px;
   color: #fff;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -160,7 +263,7 @@ html {
 }
 .fh5co-hero-inner .fh5co-hero-smartphone {
   position: absolute;
-  right: 0px;
+  right: -25px;
   top: 10px;
   height: 650px;
 }
@@ -311,10 +414,10 @@ html {
   margin-top: -180px;
 }
 .fh5co-features-outer .col-sm-6 {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 .fh5co-features-outer .col-sm-6  {
-  height: 550px;
+  height: 450px;
 }
 .fh5co-features-outer .sm-6-content {
   margin-top: 250px;
@@ -334,6 +437,13 @@ html {
   line-height: 1.8em;
   width: 450px;
 }
+.what-why-section{
+  margin-top:100px;
+}
+
+
+
+
 .fh5co-features-outer .col-sm-6 .col-sm-image-container {
   position: relative;
   width: 300px;
@@ -685,9 +795,13 @@ height:16px;
 
   .fh5co-hero-inner .fh5co-hero-smartphone {
     position: absolute;
-    right: 10px;
+    right: -20px;
     top: 10px;
     height: 550px;
+  }
+
+  .footer-main-outer{
+    margin-top: 12rem;
   }
 
   .curved-bg-div {
@@ -696,6 +810,13 @@ height:16px;
 
   .footer-outer .footer-three-grid {
     width: 100%;
+  }
+
+  .fh5co-hero-inner > h1 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 50px;
+    letter-spacing: 2px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -709,10 +830,21 @@ height:16px;
     top: 20px;
     height: 550px;
   }
+
+  .footer-main-outer{
+    margin-top: 14rem;
+  }
 }
 @media screen and (max-width: 993px) {
+
+
+
   body {
     overflow-x: hidden;
+  }
+
+  .footer-main-outer{
+    margin-top: 30rem;
   }
 
   #fh5co-hero-wrapper {
@@ -783,6 +915,10 @@ height:16px;
   }
 }
 @media screen and (max-width: 993px) {
+
+  .footer-main-outer{
+    margin-top: 35rem;
+  }
   .fh5co-features-grid-columns .col-sm-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 100%;
@@ -792,6 +928,9 @@ height:16px;
     text-align: center;
   }
 
+  .footer-main-outer{
+    margin-top:200px;
+  }
   .featureimages{
    
     height: 320px;
@@ -880,6 +1019,20 @@ height:16px;
   .fh5co-reviews-outer {
     padding: 0;
   }
+ 
+
+
+  .background-header-wrapper{
+    
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    top: 10px;
+    right: 5px;
+    position: absolute;
+    display: inline-block;
+  }
+
 
   .navbar-light .navbar-toggler {
     color: #fff !important;
@@ -896,9 +1049,17 @@ height:16px;
     margin-left: 0 !important;
     font-size: 30px;
   }
+
+  .nav-item a:hover {
+    transform: none;
+  }
 }
 @media screen and (max-width: 800px) {
 
+
+  .footer-main-outer{
+    margin-top: 35rem;
+  }
     .col-sm-6 {
         height:400px;
     }
@@ -909,8 +1070,8 @@ height:16px;
 
   .fh5co-hero-inner > h1 {
     color: #fff;
-    font-weight: 300;
-    font-size: 45px;
+    font-weight: 500;
+    font-size: 40px;
     letter-spacing: 2px;
   }
 
@@ -1048,8 +1209,25 @@ height:16px;
     display: block;
     margin-top: 100px;
   }
+
+  .main-navbar-nav .navbar-nav .nav-item a:hover{
+    transform: none;
+  }
 }
 @media screen and (max-width: 520px) {
+
+  .social-icons-header{
+    margin-top:1rem;
+  }
+
+  .main-navbar-nav .navbar-nav .nav-item a:hover{
+    transform: none;
+    color:#2a3169;
+  }
+
+  .footer-main-outer{
+    margin-top:230px;
+  }
     .fh5co-features-outer .col-sm-6 {
         height: 400px;
     }
@@ -1074,7 +1252,7 @@ height:16px;
 
   .fh5co-hero-inner .fh5co-hero-smartphone {
     height: 380px;
-    top: 300px;
+    top: 200px;
     margin-top: 70px;
   }
 
@@ -1130,6 +1308,19 @@ Extra css testimonials
 
 .testimonial_container{
     padding-top:20px;
+    
+}
+.testimonial-one-section{
+  
+}
+
+.testimonial_container-flex{
+  display: flex;
+ /* background-color: #434769; */
+}
+
+.testimonial-one-section{
+  display: flex;
 }
 .testimonial{
 
@@ -1140,6 +1331,7 @@ Extra css testimonials
     padding-left: 40px;
     padding-right: 40px;
     margin-top:3rem;
+    position: relative;
 }
 
 .testimonial-image{
@@ -1172,6 +1364,7 @@ Extra css testimonials
 
     font-size: 1.8rem;
     font-weight: 600;
+    margin-top:30px;
 }
 
 .testimonial-text p{
@@ -1180,6 +1373,10 @@ Extra css testimonials
     font-weight:500;
 
 
+}
+.testimonial-text-section{
+  position: inherit;
+  top:80px;
 }
 
 .testimonial-author{
@@ -1193,4 +1390,27 @@ Extra css testimonials
     text-align: center;
     text-transform: uppercase;
     margin-bottom:20px;
+}
+
+@media screen and (max-width: 993px) {
+
+  .what-why-section{
+    margin-top:50px;
+  }
+
+  .testimonial-image{
+    top:50px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .testimonial-image{
+    top:50px;
+  }
+
+}
+
+
+.social-icons-header a{
+color:#000;
 }

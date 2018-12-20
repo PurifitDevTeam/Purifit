@@ -8,20 +8,20 @@ module.exports = {
     {
       resolve:'gatsby-source-contentful',
       options:{
-        spaceId:"qzjcximermd8",
-        accessToken:"445ce1b12cb5330f8a4489c661e231d1db809fb0b3a0cf050118305b69d14a01"
+        spaceId:"wftu8epj2dca",
+        accessToken:"4383cc30c12ae601a5b74e09dbfacaff1359cedf3e704a8d8cd08b01bfee998a"
       }
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Purifit - Premium filters for taps and showers',
+        short_name: 'Purifit',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#2a3169',
+        theme_color: '#2a3169',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/shower-icon.png', // This path is relative to the root of the site.
       },
     },
        'gatsby-plugin-offline',

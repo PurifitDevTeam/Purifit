@@ -6,7 +6,10 @@ import Layout from '../components/layout'
 import {Container} from '../components/styles/CommonStyles';
 import IndexComponent from '../components/index'
 import Img from 'gatsby-image'
+import SiteMeta from '../components/SiteMeta/site-metadata'
+
 const Banner = styled.section`
+
 padding: 16em 0 13em 0;
 background-attachment: fixed;
 background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${wall});
@@ -109,9 +112,14 @@ li{
 
 const IndexPage = ({data}) => {
 console.log('######## data is ',data);
-const { node } = data.allContentfulLandingPageContent.edges[0];
-console.log('node is ',node);
-  return ( <IndexComponent/>)
+//const { node } = data.allContentfulLandingPageContent.edges[0];
+//console.log('node is ',node);
+  return ( 
+    <React.Fragment>
+    <SiteMeta/>
+    <IndexComponent  WhatWhySection={data.allContentfulWhatWhySection.edges} LandingViewContent={data.allContentfulLandingViewContent.edges}  numbersSectionData={data.allContentfulNumbersSection.edges}/>
+    </React.Fragment>
+  )
 }
 
 
@@ -124,29 +132,128 @@ export default IndexPage
 
 
 export const query = graphql`
-    query{
+    query{ 
 
-      allContentfulLandingPageContent {
-        edges{
+
+
+
+      allContentfulLandingViewContent {
+        edges {
           node {
-            title
-            tagLineDescription {
-              id
-              tagLineDescription
-            }
-            button1text
-            button2text
+            id
+            productTagLine
+            shortDescription
             productImage {
               id
-              sizes(maxWidth: 1280) {
+              title 
+              sizes(maxWidth:375) {
                 ...GatsbyContentfulSizes
               }
-
+              file{
+                url
+               
+              }
             }
           }
         }
       }
-    }
 
 
-`
+
+      allContentfulNumbersSection{
+        edges {
+          node {
+            title
+            quantity
+            description
+            
+            numbersIcon {
+              id
+              file{
+                url
+              }
+            }
+          }
+        }
+      }
+
+
+      allContentfulTestimonials{
+        edges {
+          node {
+            id
+            title
+            description {
+              id
+              description
+            }
+            customerName
+            customerPlace
+          }
+        }
+      }
+
+
+      allContentfulWhatWhySection{
+        edges {
+          node {
+            id
+            title
+            description {
+              id
+              description
+            }
+            icon {
+              id
+              file{
+                url
+              }
+            }
+          }
+        }
+      }
+
+
+      allContentfulProductFeatures{
+        edges {
+          node {
+            id
+            title
+            description {
+              id
+              description
+            }
+            productImage {
+              id
+              
+            }
+            
+          }
+        }
+      }
+
+
+      allContentfulDoctorReccomendations{
+        edges {
+          node {
+            id
+            name
+            description {
+              id
+              description
+            }
+            review
+            designation
+           
+            
+          }
+        }
+      }
+
+
+
+
+
+    }`
+
+

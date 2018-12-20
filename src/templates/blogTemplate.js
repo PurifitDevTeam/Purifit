@@ -19,7 +19,7 @@ export default function Template({
 
                 <TempDiv>
                     <br/>
-                     <h1>{title}</h1>
+                    <h1 className="second-title-blog"><span className="span-features-blog">{title}</span></h1>
                         
                         <h2>{date}</h2>
                     

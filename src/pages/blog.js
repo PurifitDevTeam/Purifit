@@ -12,13 +12,13 @@ const BlogPage =({data})=> {
     <div>
         <Layout isHome={false}>
        <Section>
-           <Container>
+           <div class="container">
 
-<h1>Blogs</h1>
+          <h1 className="second-title-blog"><span className="span-features-blog">Blogs</span></h1>
       <br/>
       {data.allContentfulBlogPost.edges.map(({node})=><PostListing post={node} key={node.id}/>)}
 
-           </Container>
+           </div>
            
            
 
