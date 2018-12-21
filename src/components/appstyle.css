@@ -28,6 +28,9 @@ html {
   color: #fff !important;
 }
 
+.features-btn-first{
+display: none;
+}
 .fh5co-features-outer-doctor{
   width: 100%;
   height: auto;
@@ -1252,10 +1255,14 @@ height:16px;
 
   .fh5co-hero-inner .fh5co-hero-smartphone {
     height: 380px;
-    top: 200px;
+    top: 250px;
     margin-top: 70px;
   }
 
+
+  .features-btn-first{
+    display: inline-flex;
+  }
   .social-icons-header i:first-of-type {
     font-size: 22px;
   }
