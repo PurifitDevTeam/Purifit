@@ -117,7 +117,7 @@ console.log('######## data is ',data);
   return ( 
     <React.Fragment>
     <SiteMeta/>
-    <IndexComponent  WhatWhySection={data.allContentfulWhatWhySection.edges} LandingViewContent={data.allContentfulLandingViewContent.edges}  numbersSectionData={data.allContentfulNumbersSection.edges}/>
+    <IndexComponent  DoctorSectionData={data.allContentfulDoctorReccomendations.edges} WhatWhySection={data.allContentfulWhatWhySection.edges} LandingViewContent={data.allContentfulLandingViewContent.edges}  numbersSectionData={data.allContentfulNumbersSection.edges}/>
     </React.Fragment>
   )
 }

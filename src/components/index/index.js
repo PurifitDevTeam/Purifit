@@ -8,7 +8,7 @@ import { faFacebookF, faTwitter ,faGooglePlus, faMedium,faGithub,faInstagram } f
 //import CountUp from 'react-countup'
 import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
-
+import {Link as CLink, Element, Events, animateScroll as scroll,  scrollSpy,  scroller } from "react-scroll";
 
 import DoctorImage from '../../images/DoctorImage.png'
 import showerfilter from '../../images/product1.png'
@@ -23,6 +23,8 @@ import user1 from '../../images/user1.jpg'
 import user2 from '../../images/user2.jpg'
 import user3 from '../../images/user3.jpg'
 //import NumbersSection from '../../views/NumbersSection/NumbersSection'
+
+
  class Index extends Component {
 
 
@@ -31,6 +33,31 @@ import user3 from '../../images/user3.jpg'
       
   }
 
+  componentDidMount() {
+    Events.scrollEvent.register("begin", function() {
+      console.log("begin", arguments);
+    });
+
+    Events.scrollEvent.register("end", function() {
+      console.log("end", arguments);
+    });
+
+    scrollSpy.update();
+
+    window.addEventListener("scroll", this.handleScrollToElement);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScrollToElement);
+  }
+
+  handleScrollToElement = event => {
+    const { isHide } = this.state;
+
+    window.scrollY > 600
+      ? !isHide && this.setState({ isHide: true })
+      : isHide && this.setState({ isHide: false });
+  };
 
   changeSidebarStatus=()=>{
     console.log('change sidebar status is called ');
@@ -45,23 +72,23 @@ import user3 from '../../images/user3.jpg'
 
   render() {
 
-    const {siteTitle}= this.props;
+    const {siteTitle , DoctorSectionData }= this.props;
     let shownav = this.state.isSidebarOpen?'show':''
    const landinPageData = this.props.LandingViewContent[0].node;
-   const NumbersSectionData1 = this.props.numbersSectionData[0].node;
+   const NumbersSectionData1 = this.props.numbersSectionData[2].node;
    const NumbersSectionData2 = this.props.numbersSectionData[1].node;
-   const NumbersSectionData3 = this.props.numbersSectionData[2].node;
+   const NumbersSectionData3 = this.props.numbersSectionData[0].node;
 
-   const WhatWhySectionData1 = this.props.WhatWhySection[0].node;
+   const WhatWhySectionData1 = this.props.WhatWhySection[2].node;
    const WhatWhySectionData2 = this.props.WhatWhySection[1].node;
-   const WhatWhySectionData3 = this.props.WhatWhySection[2].node;
+   const WhatWhySectionData3 = this.props.WhatWhySection[0].node;
 
-   console.log('------what why section data -------',WhatWhySectionData1,'----');
+   console.log('------doctor section data -------',DoctorSectionData,'----');
     return (
       <div>
       
    
-
+      <Element name="landed" className="element"> 
            <div id="fh5co-hero-wrapper">
         <nav className="container navbar navbar-expand-lg main-navbar-nav navbar-light">
           <a className="navbar-brand" href="">Purifit</a>
@@ -78,7 +105,16 @@ import user3 from '../../images/user3.jpg'
                 <Link className="nav-link" to="/blog" >Blog</Link>
               </li>
               <li className="nav-item">
-              <Link className="nav-link" to="/" >Products</Link>
+              <CLink
+                    activeClass="active"
+                    to="products"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={800}
+                    class="topic-list-item"
+                  ><Link className="nav-link" to="/" >Products</Link>
+               </CLink>
             </li>
 
             <li className="nav-item">
@@ -104,6 +140,16 @@ import user3 from '../../images/user3.jpg'
         <div className="container fh5co-hero-inner">
         <h1 className="animated fadeIn wow" data-wow-delay="0.4s">{landinPageData.productTagLine}</h1>
         <p className="animated fadeIn wow" data-wow-delay="0.67s">{landinPageData.shortDescription} </p>
+        <CLink
+        activeClass="active"
+        to="products"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={800}
+        class="topic-list-item"
+      ><button className="btn btn-md features-btn-first animated fadeInLeft wow" data-wow-delay="0.95s" >Features</button>
+   </CLink>
           <Zoom>
           <img className="fh5co-hero-smartphone animated fadeInRight wow" data-wow-delay="1s" src={landinPageData.productImage.file.url} alt="Filter" />
           </Zoom>
@@ -117,7 +163,9 @@ import user3 from '../../images/user3.jpg'
 
 
 
-      </div>  {/*End of hero wrapper */}
+      </div>  
+      </Element>
+      {/*End of hero wrapper */}
 
 
       {/* Numbers Section */}
@@ -262,8 +310,9 @@ import user3 from '../../images/user3.jpg'
 		</div>
     </div>
     
-
+    
     {/* ******Features ********************/}
+    <Element name="products" className="element"> 
     <div className="curved-bg-div wow animated fadeIn" data-wow-delay="0.15s"></div>
 	<div id="fh5co-features" className="fh5co-features-outer">
 		<div className="container">
@@ -338,7 +387,8 @@ import user3 from '../../images/user3.jpg'
 
 
 		</div>
-	</div>
+  </div>
+  </Element>
     {/* End of Features ***************/}
 
 
@@ -356,9 +406,9 @@ import user3 from '../../images/user3.jpg'
         <img src={user1}  className="testimonial-image-user"/>
         </div>
         <div class="testimonial-text-section">
-        <div className="testimonial-title">Best Product</div>
-        <div className="testimonial-text"><p>Lleap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem</p></div>
-        <div className="testimonial-author">Emma Whitton, Customer</div>
+        <div className="testimonial-title">{DoctorSectionData[0].node.review}</div>
+        <div className="testimonial-text"><p>{DoctorSectionData[0].node.description.description}</p></div>
+        <div className="testimonial-author">{`${DoctorSectionData[0].node.name}, ${DoctorSectionData[0].node.designation}`}</div>
         </div>
         
         
@@ -373,9 +423,9 @@ import user3 from '../../images/user3.jpg'
         <img src={user2}  className="testimonial-image-user"/>
         </div>
         <div class="testimonial-text-section">
-        <div className="testimonial-title">Best Product</div>
-        <div className="testimonial-text"><p>Lleap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem</p></div>
-        <div className="testimonial-author">Emma Whitton, Customer</div>
+        <div className="testimonial-title">{DoctorSectionData[1].node.review}</div>
+        <div className="testimonial-text"><p>{DoctorSectionData[1].node.description.description}</p></div>
+        <div className="testimonial-author">{`${DoctorSectionData[1].node.name}, ${DoctorSectionData[1].node.designation}`}</div>
         </div>
         
         
