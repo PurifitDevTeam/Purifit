@@ -93,7 +93,7 @@ import user3 from '../../images/user3.jpg'
    const TestimonialsData2 = this.props.TestimonialsData[1].node;
    const TestimonialsData3 = this.props.TestimonialsData[2].node;
 
-   console.log('------testimonials------',TestimonialsData1,'----');
+   //console.log('------testimonials------',TestimonialsData1,'----');
     return (
       <div>
       

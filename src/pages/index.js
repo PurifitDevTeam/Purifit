@@ -111,7 +111,7 @@ li{
 `;
 
 const IndexPage = ({data}) => {
-console.log('######## data is ',data);
+//console.log('######## data is ',data);
 //const { node } = data.allContentfulLandingPageContent.edges[0];
 //console.log('node is ',node);
   return ( 
