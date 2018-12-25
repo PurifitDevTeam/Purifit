@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 //import wall from '../../images/wall.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faTwitter ,faGooglePlus, faMedium,faGithub,faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faTwitter , faGooglePlus, faMedium,faGithub,faInstagram } from '@fortawesome/free-brands-svg-icons'
 //import Carousel from 'nuka-carousel'
 //import CountUp from 'react-countup'
 import Zoom from 'react-reveal/Zoom'
@@ -22,7 +22,7 @@ import Footer from '../footer/index'
 import user1 from '../../images/user1.jpg'
 import user2 from '../../images/user2.jpg'
 import user3 from '../../images/user3.jpg'
-//import NumbersSection from '../../views/NumbersSection/NumbersSection'
+
 
 
  class Index extends Component {
@@ -83,7 +83,17 @@ import user3 from '../../images/user3.jpg'
    const WhatWhySectionData2 = this.props.WhatWhySection[1].node;
    const WhatWhySectionData3 = this.props.WhatWhySection[0].node;
 
-   console.log('------doctor section data -------',DoctorSectionData,'----');
+
+   const ProductFeaturesData1 = this.props.ProductFeaturesData[3].node;
+   const ProductFeaturesData2 = this.props.ProductFeaturesData[2].node;
+   const ProductFeaturesData3 = this.props.ProductFeaturesData[1].node;
+   const ProductFeaturesData4 = this.props.ProductFeaturesData[0].node;
+
+   const TestimonialsData1 = this.props.TestimonialsData[0].node;
+   const TestimonialsData2 = this.props.TestimonialsData[1].node;
+   const TestimonialsData3 = this.props.TestimonialsData[2].node;
+
+   //console.log('------testimonials------',TestimonialsData1,'----');
     return (
       <div>
       
@@ -224,12 +234,12 @@ import user3 from '../../images/user3.jpg'
          <div class="testimonial">
          <div className="testimonial-image">
          
-         <img src={user1}  className="testimonial-image-user"/>
+         <img src={TestimonialsData1.image.file.url}  className="testimonial-image-user"/>
          </div>
          <div class="testimonial-text-section">
-         <div className="testimonial-title">Best Product</div>
-         <div className="testimonial-text"><p>Lleap into electronic typesetting, Excellent Product with the release of Letraset sheets containing Lorem Ipsum </p></div>
-         <div className="testimonial-author">Emma Whitton, Customer</div>
+         <div className="testimonial-title">{TestimonialsData1.title}</div>
+         <div className="testimonial-text"><p>{TestimonialsData1.description.description} </p></div>
+         <div className="testimonial-author">{`${TestimonialsData1.customerName}, ${TestimonialsData1.customerPlace}`}</div>
          </div>
          
          
@@ -238,12 +248,12 @@ import user3 from '../../images/user3.jpg'
          <div class="testimonial">
         <div className="testimonial-image">
         
-        <img src={user2}  className="testimonial-image-user"/>
+        <img src={TestimonialsData2.image.file.url}  className="testimonial-image-user"/>
         </div>
         <div class="testimonial-text-section">
-        <div className="testimonial-title">Best Product</div>
-        <div className="testimonial-text"><p>Lleap into electronic typesetting, Excellent Product with the release of Letraset sheets containing Lorem Ipsum </p></div>
-        <div className="testimonial-author">Sophie Turner, Customer</div>
+        <div className="testimonial-title">{TestimonialsData2.title}</div>
+        <div className="testimonial-text"><p>{TestimonialsData2.description.description}</p></div>
+        <div className="testimonial-author">{`${TestimonialsData2.customerName}, ${TestimonialsData2.customerPlace}`}</div>
         </div>
         
         
@@ -253,12 +263,12 @@ import user3 from '../../images/user3.jpg'
          <div class="testimonial">
         <div className="testimonial-image">
         
-        <img src={user3}  className="testimonial-image-user"/>
+        <img src={TestimonialsData3.image.file.url}  className="testimonial-image-user"/>
         </div>
         <div class="testimonial-text-section">
-        <div className="testimonial-title">Best Product</div>
-        <div className="testimonial-text"><p>Lleap into electronic typesetting, Excellent Product with the release of Letraset sheets containing Lorem Ipsum </p></div>
-        <div className="testimonial-author">Julia Roberts, Customer</div>
+        <div className="testimonial-title">{TestimonialsData3.title}</div>
+        <div className="testimonial-text"><p>{TestimonialsData3.description.description} </p></div>
+        <div className="testimonial-author">{`${TestimonialsData3.customerName}, ${TestimonialsData3.customerPlace}`}</div>
         </div>
         
         
@@ -321,43 +331,44 @@ import user3 from '../../images/user3.jpg'
 
 				<div className="col-sm-6 in-order-1 wow animated fadeInLeft" data-wow-delay="0.22s">
 					<div className="col-sm-image-container">
-						<Fade delay={400} left={true}><img className="img-float-left featureimages" src={withShower} alt="shower filter"/></Fade>
-						<span className="span-new">NEW</span>
-						<span className="span-improved">Improved</span>
+						<Fade delay={400} left={true}><img className="img-float-left featureimages" src={ProductFeaturesData1.productImage.file.url} alt="shower filter"/></Fade>
+						{/* <span className="span-new">NEW</span>
+             <span className="span-improved">Improved</span>
+            */}
 					</div>
 				</div>
 
 				<div className="col-sm-6 in-order-2 sm-6-content wow animated fadeInRight" data-wow-delay="0.22s">
-					<h1>New Features</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor iste beatae ad adipisci, fugiat dignissimos pariatur, dolore nemo suscipit cum nisi earum voluptates nulla! </p>
+					<h1>{ProductFeaturesData1.title}</h1>
+					<p>{ProductFeaturesData1.description.description} </p>
 				{/* 	<span className="circle circle-first"><i className="fab fa-instagram"></i></span>
 					<span className="circle circle-middle"><i className="fab fa-facebook"></i></span>
     <span className="circle circle-last"><i className="fab fa-twitter"></i></span> */}
 				</div>
 
 				<div className="col-sm-6 in-order-3 sm-6-content wow animated fadeInLeft" data-wow-delay="0.22s">
-					<h1>ADDED MINERALS</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor iste beatae ad adipisci, fugiat dignissimos pariatur, dolore nemo suscipit cum nisi earum voluptates nulla! </p>
+					<h1>{ProductFeaturesData2.title}</h1>
+					<p>{ProductFeaturesData2.description.description} </p>
 					{/*	<span className="circle circle-first"><i className="fas fa-star"></i></span>
 					<span className="circle circle-middle"><i className="far fa-star"></i></span>
 					<span className="circle circle-last"><i className="far fa-thumbs-up"></i></span>*/}
 				</div>
 
 				<div className="col-sm-6 in-order-4 wow animated fadeInRight" data-wow-delay="0.22s">
-					<Fade delay={400} right={true}><img className="img-float-right featureimages" src={showerfilter} alt="tap filter"/></Fade>
+					<Fade delay={400} right={true}><img className="img-float-right featureimages" src={ProductFeaturesData2.productImage.file.url} alt="tap filter"/></Fade>
         </div>
         
         <div className="col-sm-6 in-order-1 wow animated fadeInLeft" data-wow-delay="0.22s">
         <div className="col-sm-image-container">
-          <Fade delay={400} left={true}><img className="img-float-left featureimages" src={withShower} alt="shower filter"/></Fade>
-          <span className="span-new">NEW</span>
-          <span className="span-improved">Improved</span>
+          <Fade delay={400} left={true}><img className="img-float-left featureimages" src={ProductFeaturesData3.productImage.file.url} alt="shower filter"/></Fade>
+         {/* <span className="span-new">NEW</span>
+        <span className="span-improved">Improved</span> */}
         </div>
       </div>
 
       <div className="col-sm-6 in-order-2 sm-6-content wow animated fadeInRight" data-wow-delay="0.22s">
-        <h1>New Features</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor iste beatae ad adipisci, fugiat dignissimos pariatur, dolore nemo suscipit cum nisi earum voluptates nulla! </p>
+        <h1>{ProductFeaturesData3.title}</h1>
+        <p>{ProductFeaturesData3.description.description} </p>
       {/* 	<span className="circle circle-first"><i className="fab fa-instagram"></i></span>
         <span className="circle circle-middle"><i className="fab fa-facebook"></i></span>
   <span className="circle circle-last"><i className="fab fa-twitter"></i></span> */}
@@ -365,14 +376,14 @@ import user3 from '../../images/user3.jpg'
 
 				<div className="col-sm-6 in-order-5 wow animated fadeInLeft" data-wow-delay="0.22s">
 					<div className="col-sm-image-container">
-						<Fade delay={400} left={true}><img className="img-float-left featureimages" src={tap2} alt="tap filter" /></Fade>
-						<span className="span-data">DATA</span>
-						<span className="span-percent">100%</span>
+						<Fade delay={400} left={true}><img className="img-float-left featureimages" src={ProductFeaturesData4.productImage.file.url} alt="tap filter" /></Fade>
+						{/*<span className="span-data">DATA</span>
+<span className="span-percent">100%</span> */}
 					</div>
 				</div>
 				<div className="col-sm-6 in-order-6 sm-6-content wow animated fadeInRight" data-wow-delay="0.22s">
-					<h1>EXTENDED LIFE</h1>
-					<p>Perfect for daily use consectetur adipisicing elit. Aliquam dolor iste beatae ad adipisci, fugiat dignissimos pariatur, dolore nemo suscipit cum nisi earum voluptates nulla! </p>
+					<h1>{ProductFeaturesData4.title}</h1>
+					<p>{ProductFeaturesData4.description.description}</p>
 				{/*	<span className="circle circle-first">95%</span>
 					<span className="circle circle-middle"><i className="fas fa-forward"></i></span>
         <span className="circle circle-last"><i className="fab fa-github"></i></span> */}

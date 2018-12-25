@@ -111,13 +111,13 @@ li{
 `;
 
 const IndexPage = ({data}) => {
-console.log('######## data is ',data);
+//console.log('######## data is ',data);
 //const { node } = data.allContentfulLandingPageContent.edges[0];
 //console.log('node is ',node);
   return ( 
     <React.Fragment>
     <SiteMeta/>
-    <IndexComponent  DoctorSectionData={data.allContentfulDoctorReccomendations.edges} WhatWhySection={data.allContentfulWhatWhySection.edges} LandingViewContent={data.allContentfulLandingViewContent.edges}  numbersSectionData={data.allContentfulNumbersSection.edges}/>
+    <IndexComponent TestimonialsData={data.allContentfulTestimonials.edges} ProductFeaturesData={data.allContentfulProductFeatures.edges} DoctorSectionData={data.allContentfulDoctorReccomendations.edges} WhatWhySection={data.allContentfulWhatWhySection.edges} LandingViewContent={data.allContentfulLandingViewContent.edges}  numbersSectionData={data.allContentfulNumbersSection.edges}/>
     </React.Fragment>
   )
 }
@@ -189,6 +189,11 @@ export const query = graphql`
             }
             customerName
             customerPlace
+            image {
+              file {
+                url
+              }
+            }
           }
         }
       }
@@ -225,6 +230,9 @@ export const query = graphql`
             }
             productImage {
               id
+              file{
+                url
+              }
               
             }
             
