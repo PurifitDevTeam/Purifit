@@ -1,10 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
-import {Container} from '../styles/CommonStyles';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars,fabFacebook } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF, faTwitter ,faGooglePlus, faMedium, faGithub,faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faTwitter ,faGooglePlus, faMedium, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import showericon from '../../images/shower-icon.png'
 
 
@@ -45,7 +43,7 @@ const Footer = ()=> {
 
 			<span className="border-bottom-footer"></span>
 
-			<p className="copyright">&copy; 2018 Purifit All rights reserved. Design by <span className="footericonshower"><img className="showerimageicon" src={showericon}/></span></p>
+			<p className="copyright">&copy; 2018 Purifit All rights reserved. Design by <span className="footericonshower"><img className="showerimageicon" src={showericon} alt="purifit-logo"/></span></p>
 
 		</div>
 		

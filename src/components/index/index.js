@@ -10,18 +10,12 @@ import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
 import {Link as CLink, Element, Events, animateScroll as scroll,  scrollSpy,  scroller } from "react-scroll";
 
-import DoctorImage from '../../images/DoctorImage.png'
-import showerfilter from '../../images/product1.png'
-import withShower from '../../images/with-shower.png'
-import tap2 from '../../images/tap2.png'
-import productbox from '../../images/product-box-1.png'
 
-import leftarrow from '../../images/left-arrow.jpg'
-import rightarrow from '../../images/right-arrow.jpg'
+
+//import leftarrow from '../../images/left-arrow.jpg'
+//import rightarrow from '../../images/right-arrow.jpg'
 import Footer from '../footer/index'
-import user1 from '../../images/user1.jpg'
-import user2 from '../../images/user2.jpg'
-import user3 from '../../images/user3.jpg'
+
 
 
 
@@ -93,7 +87,6 @@ import user3 from '../../images/user3.jpg'
    const TestimonialsData2 = this.props.TestimonialsData[1].node;
    const TestimonialsData3 = this.props.TestimonialsData[2].node;
 
-   //console.log('------testimonials------',TestimonialsData1,'----');
     return (
       <div>
       
@@ -122,8 +115,8 @@ import user3 from '../../images/user3.jpg'
                     smooth={true}
                     offset={0}
                     duration={800}
-                    class="topic-list-item"
-                  ><Link className="nav-link" to="/" >Products</Link>
+                    className="topic-list-item nav-link"
+                  >Products
                </CLink>
             </li>
 
@@ -157,7 +150,7 @@ import user3 from '../../images/user3.jpg'
         smooth={true}
         offset={0}
         duration={800}
-        class="topic-list-item"
+        className="topic-list-item"
       ><button className="btn btn-md features-btn-first animated fadeInLeft wow" data-wow-delay="0.95s" >Features</button>
    </CLink>
           <Zoom>
@@ -231,12 +224,12 @@ import user3 from '../../images/user3.jpg'
          <div className="row fh5co-features-grid-columns">
         
          <div className="col-sm-4">
-         <div class="testimonial">
+         <div className="testimonial">
          <div className="testimonial-image">
          
          <img src={TestimonialsData1.image.file.url}  className="testimonial-image-user"/>
          </div>
-         <div class="testimonial-text-section">
+         <div className="testimonial-text-section">
          <div className="testimonial-title">{TestimonialsData1.title}</div>
          <div className="testimonial-text"><p>{TestimonialsData1.description.description} </p></div>
          <div className="testimonial-author">{`${TestimonialsData1.customerName}, ${TestimonialsData1.customerPlace}`}</div>
@@ -245,12 +238,12 @@ import user3 from '../../images/user3.jpg'
          
          </div></div>
          <div className="col-sm-4">
-         <div class="testimonial">
+         <div className="testimonial">
         <div className="testimonial-image">
         
         <img src={TestimonialsData2.image.file.url}  className="testimonial-image-user"/>
         </div>
-        <div class="testimonial-text-section">
+        <div className="testimonial-text-section">
         <div className="testimonial-title">{TestimonialsData2.title}</div>
         <div className="testimonial-text"><p>{TestimonialsData2.description.description}</p></div>
         <div className="testimonial-author">{`${TestimonialsData2.customerName}, ${TestimonialsData2.customerPlace}`}</div>
@@ -260,12 +253,12 @@ import user3 from '../../images/user3.jpg'
         </div>
         </div>
          <div className="col-sm-4">
-         <div class="testimonial">
+         <div className="testimonial">
         <div className="testimonial-image">
         
         <img src={TestimonialsData3.image.file.url}  className="testimonial-image-user"/>
         </div>
-        <div class="testimonial-text-section">
+        <div className="testimonial-text-section">
         <div className="testimonial-title">{TestimonialsData3.title}</div>
         <div className="testimonial-text"><p>{TestimonialsData3.description.description} </p></div>
         <div className="testimonial-author">{`${TestimonialsData3.customerName}, ${TestimonialsData3.customerPlace}`}</div>
@@ -411,12 +404,12 @@ import user3 from '../../images/user3.jpg'
     <div className="row fh5co-advantages-grid-columns">
    
         <div className="col-sm-6">
-        <div class="testimonial">
+        <div className="testimonial">
         <div className="testimonial-image">
         
-        <img src={user1}  className="testimonial-image-user"/>
+        <img src={DoctorSectionData[0].node.profilePicture?DoctorSectionData[0].node.profilePicture.file.url:''}  className="testimonial-image-user"/>
         </div>
-        <div class="testimonial-text-section">
+        <div className="testimonial-text-section">
         <div className="testimonial-title">{DoctorSectionData[0].node.review}</div>
         <div className="testimonial-text"><p>{DoctorSectionData[0].node.description.description}</p></div>
         <div className="testimonial-author">{`${DoctorSectionData[0].node.name}, ${DoctorSectionData[0].node.designation}`}</div>
@@ -428,12 +421,12 @@ import user3 from '../../images/user3.jpg'
 
 
         <div className="col-sm-6">
-        <div class="testimonial">
+        <div className="testimonial">
         <div className="testimonial-image">
         
-        <img src={user2}  className="testimonial-image-user"/>
+        <img src={DoctorSectionData[1].node.profilePicture?DoctorSectionData[1].node.profilePicture.file.url:''}   className="testimonial-image-user"/>
         </div>
-        <div class="testimonial-text-section">
+        <div className="testimonial-text-section">
         <div className="testimonial-title">{DoctorSectionData[1].node.review}</div>
         <div className="testimonial-text"><p>{DoctorSectionData[1].node.description.description}</p></div>
         <div className="testimonial-author">{`${DoctorSectionData[1].node.name}, ${DoctorSectionData[1].node.designation}`}</div>
