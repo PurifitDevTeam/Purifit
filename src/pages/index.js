@@ -252,7 +252,11 @@ export const query = graphql`
             }
             review
             designation
-           
+            profilePicture{
+              file{
+                url
+              }
+            }
             
           }
         }

@@ -1,10 +1,7 @@
 import React,{ Component } from 'react'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
-//import wall from '../../images/wall.jpg'
-import Helmet from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars,faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF, faTwitter , faGooglePlus, faMedium, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import SiteMetaData from '../SiteMeta/site-metadata'
 import './style.css'
 
@@ -30,19 +27,20 @@ import './style.css'
   }
 
   render() {
-console.log('isHome',this.props);
+  console.log('isHome',this.props);
     const {siteTitle}= this.props;
+    let shownav = this.state.isSidebarOpen?'show':''
     return (
      
       <div className="app-header-wrapper">
       <SiteMetaData title={siteTitle}/>
       <nav className="container navbar navbar-expand-lg main-navbar-nav navbar-light">
       <a className="navbar-brand" href="">Purifit</a>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button className="navbar-toggler" type="button" onClick={this.changeSidebarStatus}>
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <div className={`collapse navbar-collapse ${shownav}`}  id="navbarSupportedContent">
         <ul className="navbar-nav nav-items-center ml-auto mr-auto">
           <li className="nav-item active">
             <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
@@ -63,9 +61,11 @@ console.log('isHome',this.props);
           
         </ul>
         <div className="social-icons-header">
-          <a href="https://www.facebook.com/fh5co"><i className="fab fa-facebook-f"></i></a>
-          <a href="https://freehtml5.co"><i className="fab fa-instagram"></i></a>
-          <a href="https://www.twitter.com/fh5co"><i className="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/purifit" target="blank"><FontAwesomeIcon    icon={faFacebookF} /></a>
+        <a href="https://twitter.com/purifit" target="blank"><FontAwesomeIcon    icon={faTwitter} /></a>
+        <a href="https://www.instagram.com/purifit" target="blank"><FontAwesomeIcon icon={faInstagram} /></a>
+        <a href="https://www.googleplus.com/purifit" target="blank"><FontAwesomeIcon icon={faGooglePlus} /></a>
+        <a href="https://www.googleplus.com/purifit" target="blank"><FontAwesomeIcon icon={faMedium}/></a>
         </div>
       </div>
     </nav>

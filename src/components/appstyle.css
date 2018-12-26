@@ -56,6 +56,9 @@ display: none;
   
 }
 
+.navbar-toggler,.navbar-toggler-icon{
+  cursor: pointer;
+}
 
 .number-section-item{
   
@@ -799,7 +802,7 @@ height:16px;
   .fh5co-hero-inner .fh5co-hero-smartphone {
     position: absolute;
     right: -20px;
-    top: 10px;
+    top: 35px;
     height: 550px;
   }
 
@@ -830,7 +833,7 @@ height:16px;
   .fh5co-hero-inner .fh5co-hero-smartphone {
     position: absolute;
     right: -15px;
-    top: 20px;
+    top: 64px;
     height: 550px;
   }
 
@@ -864,14 +867,17 @@ height:16px;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    top: 200px;
+    top: 60px;
     height: 460px;
     margin-top: 110px;
   }
 
   .fh5co-advantages-outer {
-    margin-top: 50px;
+    margin-top: 320px;
     padding-bottom: 0;
+  }
+  .fh5co-hero-inner > h1{
+    font-size:22px;
   }
 
   .fh5co-advantages-outer .fh5co-advantages-grid-columns .col-sm-4 .grid-image {
@@ -1010,7 +1016,7 @@ height:16px;
 
   .fh5co-features-grid-columns {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
   .fh5co-features-grid-columns .in-order-4 {
     order: 1;
@@ -1059,6 +1065,10 @@ height:16px;
 }
 @media screen and (max-width: 800px) {
 
+  .fh5co-advantages-outer {
+    margin-top: 50px;
+    padding-bottom: 0;}
+
 
   .footer-main-outer{
     margin-top: 35rem;
@@ -1097,7 +1107,7 @@ height:16px;
 
   .fh5co-hero-inner .fh5co-hero-smartphone {
     height: 420px;
-    top: 310px;
+    top: 250px;
   }
 
   .fh5co-advantages-outer .second-title {
@@ -1219,6 +1229,11 @@ height:16px;
 }
 @media screen and (max-width: 520px) {
 
+
+  .fh5co-features-grid-columns {
+    display: flex;
+    flex-direction: column;
+  }
   .social-icons-header{
     margin-top:1rem;
   }
@@ -1242,7 +1257,7 @@ height:16px;
   }
 
   .fh5co-hero-inner > h1 {
-    font-size: 40px;
+    font-size: 1.8rem;
   }
 
   .fh5co-hero-inner > p {
@@ -1255,7 +1270,7 @@ height:16px;
 
   .fh5co-hero-inner .fh5co-hero-smartphone {
     height: 380px;
-    top: 250px;
+    top: 400px;
     margin-top: 70px;
   }
 
@@ -1369,7 +1384,7 @@ Extra css testimonials
 
 .testimonial-title{
 
-    font-size: 1.8rem;
+    font-size: 1.35rem;
     font-weight: 600;
     margin-top:30px;
 }
