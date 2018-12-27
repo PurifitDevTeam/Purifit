@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout';
-import styled from 'styled-components'
-import {Container,Section} from '../components/styles/CommonStyles';
+//import styled from 'styled-components'
+import {Section} from '../components/styles/CommonStyles';
 import PostListing from '../components/Posts/PostListing'
 
 
