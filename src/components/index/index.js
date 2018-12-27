@@ -1,14 +1,14 @@
 import React,{ Component } from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+//import Img from 'gatsby-image'
 //import wall from '../../images/wall.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faTwitter , faGooglePlus, faMedium,faGithub,faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faTwitter , faGooglePlus, faMedium,faInstagram } from '@fortawesome/free-brands-svg-icons'
 //import Carousel from 'nuka-carousel'
 //import CountUp from 'react-countup'
 import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
-import {Link as CLink, Element, Events, animateScroll as scroll,  scrollSpy,  scroller } from "react-scroll";
+import {Link as CLink, Element, Events,  scrollSpy   } from "react-scroll";
 
 
 
@@ -66,7 +66,8 @@ import Footer from '../footer/index'
 
   render() {
 
-    const {siteTitle , DoctorSectionData }= this.props;
+    const { DoctorSectionData }= this.props;
+    
     let shownav = this.state.isSidebarOpen?'show':''
    const landinPageData = this.props.LandingViewContent[0].node;
    const NumbersSectionData1 = this.props.numbersSectionData[2].node;
@@ -94,7 +95,7 @@ import Footer from '../footer/index'
       <Element name="landed" className="element"> 
            <div id="fh5co-hero-wrapper">
         <nav className="container navbar navbar-expand-lg main-navbar-nav navbar-light">
-          <a className="navbar-brand" href="">Purifit</a>
+          <Link className="navbar-brand" to="/">Purifit</Link>
           <button className="navbar-toggler" type="button" onClick={this.changeSidebarStatus}>
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -227,7 +228,7 @@ import Footer from '../footer/index'
          <div className="testimonial">
          <div className="testimonial-image">
          
-         <img src={TestimonialsData1.image.file.url}  className="testimonial-image-user"/>
+         <img src={TestimonialsData1.image.file.url}  className="testimonial-image-user" alt="user1" />
          </div>
          <div className="testimonial-text-section">
          <div className="testimonial-title">{TestimonialsData1.title}</div>
@@ -241,7 +242,7 @@ import Footer from '../footer/index'
          <div className="testimonial">
         <div className="testimonial-image">
         
-        <img src={TestimonialsData2.image.file.url}  className="testimonial-image-user"/>
+        <img src={TestimonialsData2.image.file.url}  className="testimonial-image-user" alt="user-2" />
         </div>
         <div className="testimonial-text-section">
         <div className="testimonial-title">{TestimonialsData2.title}</div>
@@ -256,7 +257,7 @@ import Footer from '../footer/index'
          <div className="testimonial">
         <div className="testimonial-image">
         
-        <img src={TestimonialsData3.image.file.url}  className="testimonial-image-user"/>
+        <img src={TestimonialsData3.image.file.url}  className="testimonial-image-user" alt="user-3" />
         </div>
         <div className="testimonial-text-section">
         <div className="testimonial-title">{TestimonialsData3.title}</div>
@@ -407,7 +408,7 @@ import Footer from '../footer/index'
         <div className="testimonial">
         <div className="testimonial-image">
         
-        <img src={DoctorSectionData[0].node.profilePicture?DoctorSectionData[0].node.profilePicture.file.url:''}  className="testimonial-image-user"/>
+        <img src={DoctorSectionData[0].node.profilePicture?DoctorSectionData[0].node.profilePicture.file.url:''} alt="doctor-profile" className="testimonial-image-user"/>
         </div>
         <div className="testimonial-text-section">
         <div className="testimonial-title">{DoctorSectionData[0].node.review}</div>
@@ -424,7 +425,7 @@ import Footer from '../footer/index'
         <div className="testimonial">
         <div className="testimonial-image">
         
-        <img src={DoctorSectionData[1].node.profilePicture?DoctorSectionData[1].node.profilePicture.file.url:''}   className="testimonial-image-user"/>
+        <img src={DoctorSectionData[1].node.profilePicture?DoctorSectionData[1].node.profilePicture.file.url:''}  alt="doctor-profile" className="testimonial-image-user"/>
         </div>
         <div className="testimonial-text-section">
         <div className="testimonial-title">{DoctorSectionData[1].node.review}</div>

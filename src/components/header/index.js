@@ -35,7 +35,7 @@ import './style.css'
       <div className="app-header-wrapper">
       <SiteMetaData title={siteTitle}/>
       <nav className="container navbar navbar-expand-lg main-navbar-nav navbar-light">
-      <a className="navbar-brand" href="">Purifit</a>
+      <Link className="navbar-brand" to="/">Purifit</Link>
       <button className="navbar-toggler" type="button" onClick={this.changeSidebarStatus}>
         <span className="navbar-toggler-icon"></span>
       </button>
