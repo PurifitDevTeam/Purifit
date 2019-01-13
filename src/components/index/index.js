@@ -217,11 +217,11 @@ import Footer from '../footer/index'
 
        {/* ******Testimonials ********************/}
  <div className="curved-bg-div wow animated fadeIn" data-wow-delay="0.15s"></div>
- <div id="fh5co-features" className="fh5co-features-outer">
+ <div id="fh5co-features" className="fh5co-features-outer" style={{marginTop:'-229px'}}>
      <div className="container">
 
 
-     <div className="testimonial-section-heading"> <h1>Our users say..</h1></div>
+     <div className="testimonial-section-heading"> <h1>Customer Testimonials</h1></div>
          <div className="row fh5co-features-grid-columns">
         
          <div className="col-sm-4">
@@ -282,8 +282,8 @@ import Footer from '../footer/index'
       {/* What why and how section */}
       <div className="fh5co-advantages-outer what-why-section">
 		<div className="container">
-			<h1 className="second-title"> <span className="span-features">What, Why </span></h1>
-			<small>We will tell you what we are trying to solve, what impact does it make</small>
+			<h1 className="second-title"> <span className="span-features">Purifit </span></h1>
+			<small>This is who we are</small>
 
 			<div className="row fh5co-advantages-grid-columns">
 

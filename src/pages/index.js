@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import wall from '../images/wall.jpg';
-import Layout from '../components/layout' //important 
+import Layout from '../components/layout'
 import {Container} from '../components/styles/CommonStyles';
 import IndexComponent from '../components/index'
+import Img from 'gatsby-image'
 import SiteMeta from '../components/SiteMeta/site-metadata'
 
 const Banner = styled.section`
@@ -250,11 +252,11 @@ export const query = graphql`
             }
             review
             designation
-            profilePicture{
-              file{
-                url
-              }
-            } 
+           profilePicture{
+            file{
+              url
+            }
+          }
             
           }
         }
